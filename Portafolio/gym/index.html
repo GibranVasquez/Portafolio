@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TITAN Fitness &mdash; Forja tu poder</title>
+  <meta name="description" content="TITAN Fitness - El gimnasio más intenso. Transforma tu cuerpo, forja tu carácter." />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TITAN Fitness — Forja tu poder" />
+  <meta property="og:description" content="TITAN Fitness - El gimnasio más intenso. Transforma tu cuerpo, forja tu carácter." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Russo+One&family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Bootstrap 5.3 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <noscript><div class="noscript-warning"><i class="fa-solid fa-triangle-exclamation"></i> JavaScript requerido para funcionalidad completa.</div></noscript>
+
+  <!-- ============================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================ -->
+  <nav class="navbar navbar-expand-lg fixed-top titan-navbar" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand titan-logo" href="#">
+        <i class="fa-solid fa-bolt"></i>
+        TITAN <span>Fitness</span>
+      </a>
+
+      <button
+        class="navbar-toggler titan-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+      >
+        <span class="titan-toggler__bar"></span>
+        <span class="titan-toggler__bar"></span>
+        <span class="titan-toggler__bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#hero" class="nav-link titan-nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="#stats" class="nav-link titan-nav-link">Estad&iacute;sticas</a></li>
+          <li class="nav-item"><a href="#programs" class="nav-link titan-nav-link">Programas</a></li>
+          <li class="nav-item"><a href="#trainers" class="nav-link titan-nav-link">Entrenadores</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link titan-nav-link">Precios</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link titan-nav-link">Testimonios</a></li>
+          <li class="nav-item"><a href="#store" class="nav-link titan-nav-link">Tienda</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link titan-nav-link">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- MAIN -->
+  <!-- ============================================ -->
+  <main id="main">
+
+  <!-- ============================================ -->
+  <!-- HERO -->
+  <!-- ============================================ -->
+  <section class="titan-hero" id="hero">
+    <div class="titan-hero__overlay"></div>
+    <div class="container titan-hero__body">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <p class="titan-hero__pre">/ FORJA TU PODER /</p>
+          <h1 class="titan-hero__title glitch" data-text="SÉ EL TITÁN">S&Eacute; EL <span>TIT&Aacute;N</span></h1>
+          <p class="titan-hero__sub">Entrena como un guerrero. Transforma tu cuerpo. Conquista tu mente.</p>
+          <div class="titan-hero__actions">
+            <a href="#pricing" class="btn titan-btn titan-btn--primary">Empieza hoy</a>
+            <a href="#programs" class="btn titan-btn titan-btn--outline">Ver programas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="titan-hero__scroll" aria-hidden="true">
+      <span class="titan-hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- STATS -->
+  <!-- ============================================ -->
+  <section class="titan-stats" id="stats">
+    <div class="container">
+      <div class="row g-4 text-center">
+
+        <div class="col-6 col-lg-3">
+          <div class="titan-stat">
+            <span class="titan-stat__icon"><i class="fa-solid fa-dumbbell"></i></span>
+            <span class="titan-stat__num" data-count="15000">0</span>
+            <span class="titan-stat__label">Miembros activos</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="titan-stat">
+            <span class="titan-stat__icon"><i class="fa-solid fa-trophy"></i></span>
+            <span class="titan-stat__num" data-count="480">0</span>
+            <span class="titan-stat__label">Competidores entrenados</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="titan-stat">
+            <span class="titan-stat__icon"><i class="fa-solid fa-users"></i></span>
+            <span class="titan-stat__num" data-count="35">0</span>
+            <span class="titan-stat__label">Entrenadores elite</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="titan-stat">
+            <span class="titan-stat__icon"><i class="fa-solid fa-calendar-check"></i></span>
+            <span class="titan-stat__num" data-count="12">0</span>
+            <span class="titan-stat__label">A&ntilde;os de legado</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PROGRAMS -->
+  <!-- ============================================ -->
+  <section class="titan-section" id="programs">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// PROGRAMS //</span>
+          <h2 class="titan-section__title glitch" data-text="ENTRENA CON PROPÓSITO">ENTRENA CON <span>PROPÓSITO</span></h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-card">
+            <div class="titan-card__img">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Hombre levantando pesas en programa de fuerza" loading="lazy" />
+            </div>
+            <div class="titan-card__body">
+              <span class="titan-card__badge">Popular</span>
+              <h3 class="titan-card__title">Fuerza Total</h3>
+              <p class="titan-card__text">Programa intensivo de levantamiento de pesas y fuerza funcional. Diseñado para maximizar tu potencia.</p>
+              <div class="titan-card__meta">
+                <span><i class="fa-regular fa-clock"></i> 12 semanas</span>
+                <span><i class="fa-regular fa-calendar"></i> 5 d&iacute;as / sem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-card">
+            <div class="titan-card__img">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Persona haciendo cardio extremo" loading="lazy" />
+            </div>
+            <div class="titan-card__body">
+              <span class="titan-card__badge titan-card__badge--new">Nuevo</span>
+              <h3 class="titan-card__title">Cardio Extremo</h3>
+              <p class="titan-card__text">HIIT, boxeo y entrenamiento metabólico para quemar grasa y mejorar tu resistencia cardiovascular.</p>
+              <div class="titan-card__meta">
+                <span><i class="fa-regular fa-clock"></i> 8 semanas</span>
+                <span><i class="fa-regular fa-calendar"></i> 6 d&iacute;as / sem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-card">
+            <div class="titan-card__img">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80" alt="Persona haciendo cross training" loading="lazy" />
+            </div>
+            <div class="titan-card__body">
+              <h3 class="titan-card__title">Cross Titan</h3>
+              <p class="titan-card__text">Cross training de alto rendimiento. Combina gimnástica, halterofilia y cardio en cada sesión.</p>
+              <div class="titan-card__meta">
+                <span><i class="fa-regular fa-clock"></i> 16 semanas</span>
+                <span><i class="fa-regular fa-calendar"></i> 5 d&iacute;as / sem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- TRAINERS -->
+  <!-- ============================================ -->
+  <section class="titan-section titan-section--dark" id="trainers">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// ENTRENADORES //</span>
+          <h2 class="titan-section__title">LOS MEJORES <span>DEL JUEGO</span></h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="titan-trainer">
+            <div class="titan-trainer__img">
+              <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" alt="Entrenador Marcus Reed" loading="lazy" />
+            </div>
+            <div class="titan-trainer__body">
+              <h4 class="titan-trainer__name">Marcus Reed</h4>
+              <span class="titan-trainer__role">Fuerza &amp; Potencia</span>
+              <ul class="titan-trainer__stats">
+                <li><i class="fa-solid fa-medal"></i> Mr. Olympia 2022</li>
+                <li><i class="fa-solid fa-certificate"></i> NASM Elite</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="titan-trainer">
+            <div class="titan-trainer__img">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Entrenadora Sofia Vargas" loading="lazy" />
+            </div>
+            <div class="titan-trainer__body">
+              <h4 class="titan-trainer__name">Sofia Vargas</h4>
+              <span class="titan-trainer__role">Cardio &amp; HIIT</span>
+              <ul class="titan-trainer__stats">
+                <li><i class="fa-solid fa-medal"></i> CrossFit Games 2023</li>
+                <li><i class="fa-solid fa-certificate"></i> CF-L3 Trainer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="titan-trainer">
+            <div class="titan-trainer__img">
+              <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80" alt="Entrenador Jake Hunter" loading="lazy" />
+            </div>
+            <div class="titan-trainer__body">
+              <h4 class="titan-trainer__name">Jake Hunter</h4>
+              <span class="titan-trainer__role">Cross Training</span>
+              <ul class="titan-trainer__stats">
+                <li><i class="fa-solid fa-medal"></i> Champ Regional WOD</li>
+                <li><i class="fa-solid fa-certificate"></i> CrossFit L2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="titan-trainer">
+            <div class="titan-trainer__img">
+              <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&q=80" alt="Entrenadora Lena Kim" loading="lazy" />
+            </div>
+            <div class="titan-trainer__body">
+              <h4 class="titan-trainer__name">Lena Kim</h4>
+              <span class="titan-trainer__role">Flexibilidad &amp; Movilidad</span>
+              <ul class="titan-trainer__stats">
+                <li><i class="fa-solid fa-medal"></i> Yoga Alliance 500h</li>
+                <li><i class="fa-solid fa-certificate"></i> Fisioterapeuta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PRICING -->
+  <!-- ============================================ -->
+  <section class="titan-section" id="pricing">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// PRECIOS //</span>
+          <h2 class="titan-section__title">ELIGE TU <span>BATALLA</span></h2>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-plan">
+            <div class="titan-plan__header">
+              <h3 class="titan-plan__name">B&aacute;sico</h3>
+              <p class="titan-plan__price"><span class="titan-plan__currency">$</span>299<span class="titan-plan__period">/mes</span></p>
+            </div>
+            <ul class="titan-plan__list">
+              <li><i class="fa-solid fa-check"></i> Acceso a zona de pesas</li>
+              <li><i class="fa-solid fa-check"></i> Cardio libre</li>
+              <li><i class="fa-solid fa-check"></i> Vestidores</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Clases grupales</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Entrenador personal</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Nutrici&oacute;n</li>
+            </ul>
+            <a href="#" class="btn titan-btn titan-btn--outline">Afiliarse</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-plan titan-plan--featured">
+            <div class="titan-plan__badge">M&Aacute;S ELEGIDO</div>
+            <div class="titan-plan__header">
+              <h3 class="titan-plan__name">Pro</h3>
+              <p class="titan-plan__price"><span class="titan-plan__currency">$</span>599<span class="titan-plan__period">/mes</span></p>
+            </div>
+            <ul class="titan-plan__list">
+              <li><i class="fa-solid fa-check"></i> Acceso total al gym</li>
+              <li><i class="fa-solid fa-check"></i> Clases grupales ilimitadas</li>
+              <li><i class="fa-solid fa-check"></i> Sauna &amp; spa</li>
+              <li><i class="fa-solid fa-check"></i> 2 sesiones de coaching</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Plan nutricional</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> App premium</li>
+            </ul>
+            <a href="#" class="btn titan-btn titan-btn--primary">Afiliarse</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="titan-plan">
+            <div class="titan-plan__header">
+              <h3 class="titan-plan__name">Elite</h3>
+              <p class="titan-plan__price"><span class="titan-plan__currency">$</span>999<span class="titan-plan__period">/mes</span></p>
+            </div>
+            <ul class="titan-plan__list">
+              <li><i class="fa-solid fa-check"></i> Todo Pro incluido</li>
+              <li><i class="fa-solid fa-check"></i> Coach personal 1 on 1</li>
+              <li><i class="fa-solid fa-check"></i> Plan nutricional</li>
+              <li><i class="fa-solid fa-check"></i> App premium + tracking</li>
+              <li><i class="fa-solid fa-check"></i> Acceso 24/7</li>
+              <li><i class="fa-solid fa-check"></i> Merch oficial</li>
+            </ul>
+            <a href="#" class="btn titan-btn titan-btn--outline">Afiliarse</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- TESTIMONIALS (Carousel Bootstrap) -->
+  <!-- ============================================ -->
+  <section class="titan-section titan-section--dark" id="testimonials">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// TESTIMONIOS //</span>
+          <h2 class="titan-section__title">VOCES QUE <span>INSPIRAN</span></h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="testimonialCarousel" class="carousel slide titan-carousel" data-bs-ride="carousel" aria-label="Testimonios">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="titan-testimonial">
+                  <div class="titan-testimonial__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="titan-testimonial__text">"TITAN cambi&oacute; mi vida. Baj&eacute; 25 kg en 6 meses y descubr&iacute; una fuerza que no sab&iacute;a que ten&iacute;a."</p>
+                  <span class="titan-testimonial__author">Carlos Mendoza</span>
+                  <span class="titan-testimonial__role">Miembro desde 2023</span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="titan-testimonial">
+                  <div class="titan-testimonial__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="titan-testimonial__text">"Los entrenadores son de otro nivel. En 3 meses super&eacute; mi r&eacute;cord personal en press banca."</p>
+                  <span class="titan-testimonial__author">Andrea Ruiz</span>
+                  <span class="titan-testimonial__role">Atleta TITAN</span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="titan-testimonial">
+                  <div class="titan-testimonial__stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="titan-testimonial__text">"El ambiente es brutal. Aqu&iacute; todos vienen a romper sus l&iacute;mites. Me siento parte de una familia."</p>
+                  <span class="titan-testimonial__author">Miguel Torres</span>
+                  <span class="titan-testimonial__role">Miembro Elite</span>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Anterior">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Siguiente">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="carousel-indicators titan-carousel-indicators">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-label="Testimonio 1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- GALLERY -->
+  <!-- ============================================ -->
+  <section class="titan-section" id="gallery">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// GALER&Iacute;A //</span>
+          <h2 class="titan-section__title">INTENSIDAD EN <span>IM&Aacute;GENES</span></h2>
+        </div>
+      </div>
+
+      <div class="row g-2">
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80" alt="Zona de pesas del gimnasio" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-dumbbell"></i> Zona Pesas</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&q=80" alt="Clase de cardio en grupo" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-heart-pulse"></i> Cardio</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80" alt="Entrenamiento funcional" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-bolt"></i> Cross Training</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=500&q=80" alt="Boxeo y artes marciales" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-regular fa-hand-back-fist"></i> Boxeo</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80" alt="Yoga y estiramientos" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-spa"></i> Yoga</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=500&q=80" alt="Entrenamiento personalizado" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-user"></i> Personal Training</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80" alt="Vestidores y lockers" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-lock"></i> Lockers</span></div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="titan-gallery__item">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80" alt="Suplementos y nutrición" loading="lazy" />
+            <div class="titan-gallery__overlay"><span><i class="fa-solid fa-flask"></i> Nutrici&oacute;n</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- STORE -->
+  <!-- ============================================ -->
+  <section class="titan-section titan-store" id="store">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// TIENDA //</span>
+          <h2 class="titan-section__title">SUPLEMENTOS &amp; <span>PRENDAS</span></h2>
+          <p class="titan-section__desc">Todo lo que necesitas para potenciar tu rendimiento y representar el estilo TITAN.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-10">
+          <div class="titan-store__filters" id="storeFilters">
+            <button class="titan-store__filter is-active" data-filter="all">Todos</button>
+            <button class="titan-store__filter" data-filter="suplementos">Suplementos</button>
+            <button class="titan-store__filter" data-filter="prendas">Prendas</button>
+            <button class="titan-store__filter" data-filter="accesorios">Accesorios</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 titan-store__grid" id="storeGrid">
+
+        <!-- SUPLEMENTOS -->
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2c1cf?w=400&q=80" alt="Whey Protein Titan" loading="lazy" />
+              <span class="titan-store__badge">M&aacute;s vendido</span>
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Whey Protein</h3>
+              <p class="titan-store__desc">Prote&iacute;na de suero de leche. 25g de prote&iacute;na por porci&oacute;n.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$799</span>
+                <button class="titan-store__add" data-product="Whey Protein" data-price="799" aria-label="Agregar Whey Protein al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="Creatina Monohidratada" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Creatina Monohidratada</h3>
+              <p class="titan-store__desc">Creatina pura micronizada. 100% pureza, sin aditivos.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$549</span>
+                <button class="titan-store__add" data-product="Creatina Monohidratada" data-price="549" aria-label="Agregar Creatina al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1594882645126-0c5d4c0f3b1e?w=400&q=80" alt="Pre-Entreno Titan Blast" loading="lazy" />
+              <span class="titan-store__badge titan-store__badge--new">Nuevo</span>
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Pre-Entreno Titan Blast</h3>
+              <p class="titan-store__desc">Explosi&oacute;n de energ&iacute;a. Cafe&iacute;na, beta-alanina y citrulina.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$629</span>
+                <button class="titan-store__add" data-product="Pre-Entreno Titan Blast" data-price="629" aria-label="Agregar Pre-Entreno al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1579722820308-d74e5712e1b5?w=400&q=80" alt="BCAA Recuperación" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">BCAA Recuperaci&oacute;n</h3>
+              <p class="titan-store__desc">Amino&aacute;cidos esenciales. 5g de BCAAs por porci&oacute;n, sabor tropical.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$449</span>
+                <button class="titan-store__add" data-product="BCAA Recuperación" data-price="449" aria-label="Agregar BCAA al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400&q=80" alt="Quemador Termogénico" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Quemador Termog&eacute;nico</h3>
+              <p class="titan-store__desc">Acelera tu metabolismo. Extracto de t&eacute; verde, L-carnitina y cafe&iacute;na.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$539</span>
+                <button class="titan-store__add" data-product="Quemador Termogénico" data-price="539" aria-label="Agregar Quemador al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=80" alt="Multivitamínico" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Multivitam&iacute;nico</h3>
+              <p class="titan-store__desc">F&oacute;rmula completa con vitaminas A, C, D, E, zinc y magnesio.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$359</span>
+                <button class="titan-store__add" data-product="Multivitamínico" data-price="359" aria-label="Agregar Multivitamínico al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1584385479769-7e9a1a18c57b?w=400&q=80" alt="Barra Proteica Pack" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">Barra Proteica Pack 12</h3>
+              <p class="titan-store__desc">15g de prote&iacute;na por barra. Ideal para post-entreno.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$429</span>
+                <button class="titan-store__add" data-product="Barra Proteica Pack 12" data-price="429" aria-label="Agregar Barras al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="suplementos">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1763668444855-401b58dceb20?w=400&q=80" alt="L-Glutamina" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Suplementos</span>
+              <h3 class="titan-store__name">L-Glutamina</h3>
+              <p class="titan-store__desc">Recuperaci&oacute;n muscular avanzada. 5g por porci&oacute;n, micronizada.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$399</span>
+                <button class="titan-store__add" data-product="L-Glutamina" data-price="399" aria-label="Agregar L-Glutamina al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRENDAS -->
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&q=80" alt="Camiseta Titan Dry-Fit" loading="lazy" />
+              <span class="titan-store__badge">Nueva colecci&oacute;n</span>
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Camiseta Dry-Fit</h3>
+              <p class="titan-store__desc">Tecnolog&iacute;a que absorbe el sudor. Dise&ntilde;o TITAN edici&oacute;n limitada.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$399</span>
+                <button class="titan-store__add" data-product="Camiseta Dry-Fit" data-price="399" aria-label="Agregar Camiseta al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Hoodie Titan Negro" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Hoodie Titan Negro</h3>
+              <p class="titan-store__desc">Algod&oacute;n premium con logo bordado. Capucha ajustable.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$899</span>
+                <button class="titan-store__add" data-product="Hoodie Titan Negro" data-price="899" aria-label="Agregar Hoodie al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80" alt="Shorts de Entreno" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Shorts de Entreno</h3>
+              <p class="titan-store__desc">Tejido ligero y transpirable. Bolsillos con cierre, ajuste c&oacute;modo.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$459</span>
+                <button class="titan-store__add" data-product="Shorts de Entreno" data-price="459" aria-label="Agregar Shorts al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80" alt="Leggings Titan Pro" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Leggings Titan Pro</h3>
+              <p class="titan-store__desc">Compresi&oacute;n de alto rendimiento. Costuras planas, tela antimicrobiana.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$649</span>
+                <button class="titan-store__add" data-product="Leggings Titan Pro" data-price="649" aria-label="Agregar Leggings al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=400&q=80" alt="Gorra Titan" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Gorra Titan</h3>
+              <p class="titan-store__desc">Ajustable, con logo TITAN bordado en relieve. Curva preformada.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$299</span>
+                <button class="titan-store__add" data-product="Gorra Titan" data-price="299" aria-label="Agregar Gorra al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1615658342135-f63ba996dcd3?w=400&q=80" alt="Calcetines Titan Pack" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Calcetines Pack 3</h3>
+              <p class="titan-store__desc">Algod&oacute;n con compresi&oacute;n. Refuerzo en tal&oacute;n y punta.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$199</span>
+                <button class="titan-store__add" data-product="Calcetines Pack 3" data-price="199" aria-label="Agregar Calcetines al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80" alt="Chaqueta Titan Wind" loading="lazy" />
+              <span class="titan-store__badge titan-store__badge--new">Nuevo</span>
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Chaqueta Titan Wind</h3>
+              <p class="titan-store__desc">Rompevientos ligero. Resistente al agua, comprimible en su propia bolsa.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$1,199</span>
+                <button class="titan-store__add" data-product="Chaqueta Titan Wind" data-price="1199" aria-label="Agregar Chaqueta al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="prendas">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=400&q=80" alt="Bandas de Resistencia" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Prendas</span>
+              <h3 class="titan-store__name">Bandas de Resistencia</h3>
+              <p class="titan-store__desc">Set de 5 bandas con diferentes niveles de resistencia. Incluye bolsa.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$249</span>
+                <button class="titan-store__add" data-product="Bandas de Resistencia" data-price="249" aria-label="Agregar Bandas al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACCESORIOS -->
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1775199603318-7f8a9a63b40d?w=400&q=80" alt="Shaker Titan 700ml" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Shaker Titan 700ml</h3>
+              <p class="titan-store__desc">BPA-free, con mezclador integrado. Tapa herm&eacute;tica antiderrames.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$179</span>
+                <button class="titan-store__add" data-product="Shaker Titan 700ml" data-price="179" aria-label="Agregar Shaker al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1620188552551-9f98661cbef7?w=400&q=80" alt="Guantes de Pesas" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Guantes de Pesas</h3>
+              <p class="titan-store__desc">Cuero sint&eacute;tico con refuerzo en palma. Mu&ntilde;equera ajustable.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$349</span>
+                <button class="titan-store__add" data-product="Guantes de Pesas" data-price="349" aria-label="Agregar Guantes al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1682530677826-3d11c5fc3b49?w=400&q=80" alt="Toalla Microfibra" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Toalla Microfibra</h3>
+              <p class="titan-store__desc">Ultraabsorbente, de secado r&aacute;pido. Incluye gancho para bolsa.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$249</span>
+                <button class="titan-store__add" data-product="Toalla Microfibra" data-price="249" aria-label="Agregar Toalla al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1570829469395-a8824bf5475c?w=400&q=80" alt="Botella Termo 1L" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Botella Termo 1L</h3>
+              <p class="titan-store__desc">Acero inoxidable. Mantiene la temperatura por 12 horas.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$329</span>
+                <button class="titan-store__add" data-product="Botella Termo 1L" data-price="329" aria-label="Agregar Botella al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1715761195783-64f70b4608ad?w=400&q=80" alt="Bolsa Deportiva Titan" loading="lazy" />
+              <span class="titan-store__badge">Oferta</span>
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Bolsa Deportiva</h3>
+              <p class="titan-store__desc">Impermeable, m&uacute;ltiples compartimentos. Capacidad 45L.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$699</span>
+                <button class="titan-store__add" data-product="Bolsa Deportiva" data-price="699" aria-label="Agregar Bolsa al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1770493895453-4f758c40d11d?w=400&q=80" alt="Rodilleras Powerlifting" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Rodilleras Powerlifting</h3>
+              <p class="titan-store__desc">Neopreno 7mm. Compresi&oacute;n y soporte para sentadillas profundas.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$599</span>
+                <button class="titan-store__add" data-product="Rodilleras Powerlifting" data-price="599" aria-label="Agregar Rodilleras al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="Cinturón de Pesas" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Cintur&oacute;n de Pesas</h3>
+              <p class="titan-store__desc">Cuero doble costura. Hebilla de acero, 10cm de ancho.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$449</span>
+                <button class="titan-store__add" data-product="Cinturón de Pesas" data-price="449" aria-label="Agregar Cinturón al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 titan-store__item" data-category="accesorios">
+          <div class="titan-store__card">
+            <div class="titan-store__img">
+              <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&q=80" alt="Cuerda para Saltar" loading="lazy" />
+            </div>
+            <div class="titan-store__body">
+              <span class="titan-store__category">Accesorios</span>
+              <h3 class="titan-store__name">Cuerda para Saltar</h3>
+              <p class="titan-store__desc">Ajustable, con rodamientos de bolas. Mango ergon&oacute;mico antideslizante.</p>
+              <div class="titan-store__footer">
+                <span class="titan-store__price">$199</span>
+                <button class="titan-store__add" data-product="Cuerda para Saltar" data-price="199" aria-label="Agregar Cuerda al carrito">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cart notification -->
+      <div class="titan-store__cart-bar" id="storeCartBar">
+        <div class="titan-store__cart-info">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Carrito</span>
+          <span class="titan-store__cart-count" id="cartCount">0</span>
+        </div>
+        <div class="titan-store__cart-items" id="cartItems">
+          <p class="titan-store__cart-empty">Tu carrito est&aacute; vac&iacute;o</p>
+        </div>
+        <div class="titan-store__cart-total">
+          <span>Total:</span>
+          <span class="titan-store__cart-total-amount" id="cartTotal">$0</span>
+        </div>
+        <button class="btn titan-btn titan-btn--primary titan-store__cart-checkout" id="cartCheckout" disabled>
+          <i class="fa-solid fa-bolt"></i> Finalizar compra
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ (Accordion Bootstrap) -->
+  <!-- ============================================ -->
+  <section class="titan-section titan-section--dark">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// FAQ //</span>
+          <h2 class="titan-section__title">PREGU<span>NTAS</span></h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion titan-accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-controls="faq1" aria-expanded="false">
+                  &iquest;Necesito experiencia previa?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Para nada. Tenemos programas desde nivel principiante hasta avanzado. Nuestros coaches te guiar&aacute;n paso a paso.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-controls="faq2" aria-expanded="false">
+                  &iquest;Hay per&iacute;odo de prueba?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">S&iacute;. Ofrecemos 7 d&iacute;as gratis sin compromiso para que conozcas las instalaciones y el ambiente.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-controls="faq3" aria-expanded="false">
+                  &iquest;Puedo cancelar mi membres&iacute;a?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">S&iacute;, sin multas ni penalizaciones. Cancela cuando quieras, sin letras chiquitas.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CONTACT -->
+  <!-- ============================================ -->
+  <section class="titan-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <span class="titan-section__tag">// CONTACTO //</span>
+          <h2 class="titan-section__title">LISTO PARA <span>TRANSFORMARTE</span></h2>
+          <p class="titan-section__desc">D&eacute;janos tus datos y un coach te contactar&aacute;.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="titan-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.5!2d-103.35!3d20.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzEyLjAiTiAxMDPCsDIxJzAwLjAiVw!5e0!3m2!1ses!2smx!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              title="Ubicaci&oacute;n de TITAN Fitness"
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-lg-8 mt-4">
+          <form class="titan-form" id="contactForm" action="https://formspree.io/f/example" method="POST" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="titan-form__group">
+                  <input type="text" class="titan-form__input" id="name" name="name" placeholder="Nombre completo" required autocomplete="name" />
+                  <label for="name" class="visually-hidden">Nombre completo</label>
+                  <div class="titan-form__line"></div>
+                  <div class="invalid-feedback">El nombre es obligatorio</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="titan-form__group">
+                  <input type="email" class="titan-form__input" id="email" name="email" placeholder="Correo electr&oacute;nico" required autocomplete="email" />
+                  <label for="email" class="visually-hidden">Correo electr&oacute;nico</label>
+                  <div class="titan-form__line"></div>
+                  <div class="invalid-feedback">Ingresa un correo v&aacute;lido</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="titan-form__group">
+                  <input type="tel" class="titan-form__input" id="phone" name="phone" placeholder="Tel&eacute;fono" required autocomplete="tel" />
+                  <label for="phone" class="visually-hidden">Tel&eacute;fono</label>
+                  <div class="titan-form__line"></div>
+                  <div class="invalid-feedback">El tel&eacute;fono es obligatorio</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="titan-form__group">
+                  <select class="titan-form__input" id="program" name="program" required>
+                    <option value="">Programa de inter&eacute;s</option>
+                    <option value="fuerza">Fuerza Total</option>
+                    <option value="cardio">Cardio Extremo</option>
+                    <option value="cross">Cross Titan</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <div class="titan-form__line"></div>
+                  <div class="invalid-feedback">Selecciona un programa</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="titan-form__group">
+                  <textarea class="titan-form__input titan-form__input--textarea" id="message" name="message" rows="3" placeholder="Mensaje (opcional)"></textarea>
+                  <label for="message" class="visually-hidden">Mensaje (opcional)</label>
+                  <div class="titan-form__line"></div>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn titan-btn titan-btn--primary">
+                  <span>Enviar</span>
+                  <i class="fa-solid fa-bolt"></i>
+                </button>
+              </div>
+              <div class="col-12 text-center">
+                <div class="titan-form__success" id="formSuccess" style="display:none">
+                  <i class="fa-solid fa-circle-check"></i> Mensaje enviado. Te contactaremos pronto.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="titan-footer">
+    <div class="titan-footer__top">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="titan-footer__brand">
+              <i class="fa-solid fa-bolt"></i>
+              <span>TITAN Fitness</span>
+            </div>
+            <p class="titan-footer__text">Forja tu cuerpo. Forja tu mente. Forja tu car&aacute;cter.</p>
+            <div class="titan-footer__social">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-2">
+            <h5 class="titan-footer__title">Navegaci&oacute;n</h5>
+            <ul class="titan-footer__links">
+              <li><a href="#hero">Inicio</a></li>
+              <li><a href="#programs">Programas</a></li>
+              <li><a href="#trainers">Entrenadores</a></li>
+              <li><a href="#pricing">Precios</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="titan-footer__title">Contacto</h5>
+            <ul class="titan-footer__links">
+              <li><i class="fa-solid fa-location-dot"></i> Av. Fuerza 777, Col. Centro</li>
+              <li><i class="fa-solid fa-phone"></i> +52 33 7777 8888</li>
+              <li><i class="fa-solid fa-envelope"></i> hola@titanfitness.mx</li>
+              <li><i class="fa-regular fa-clock"></i> Lun&ndash;S&aacute;b: 5AM&ndash;11PM</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="titan-footer__title">Horarios</h5>
+            <div class="titan-footer__schedule">
+              <div class="titan-footer__schedule-row">
+                <span>Lun &ndash; Vie</span>
+                <span class="titan-footer__schedule-value">5:00 &ndash; 23:00</span>
+              </div>
+              <div class="titan-footer__schedule-row">
+                <span>S&aacute;bado</span>
+                <span class="titan-footer__schedule-value">6:00 &ndash; 22:00</span>
+              </div>
+              <div class="titan-footer__schedule-row">
+                <span>Domingo</span>
+                <span class="titan-footer__schedule-value">7:00 &ndash; 20:00</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="titan-footer__bottom">
+      <div class="container text-center">
+        <p>&copy; 2026 TITAN Fitness. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- MODAL (Bootstrap) -->
+  <!-- ============================================ -->
+  <div class="modal fade" id="ctaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content titan-modal">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center p-5">
+          <i class="fa-solid fa-bolt titan-modal__icon"></i>
+          <h3 class="titan-modal__title">&iexcl;Primera semana <span>GRATIS</span>!</h3>
+          <p class="titan-modal__text">Ven y descubre por qu&eacute; TITAN es el gimnasio #1 de la ciudad.</p>
+          <a href="#contact" class="btn titan-btn titan-btn--primary" data-bs-dismiss="modal">Quiero mi semana gratis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

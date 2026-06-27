@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTRACODE VR — Gibran Vasquez</title>
+  <meta name="description" content="Portafolio de Gibran Jesus Vasquez Reyes — Desarrollador Full-Stack bajo la marca ASTRACODE VR." />
+  <meta name="theme-color" content="#010205" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="astraloader" id="astraloader" aria-hidden="true">
+    <div class="astraloader__content">
+      <div class="astraloader__logo">
+        <img src="img/Logo%20empresa.png" alt="ASTRACODE VR" class="astraloader__logo-img" />
+      </div>
+      <div class="astraloader__bar">
+        <div class="astraloader__bar-fill" id="loaderBar"></div>
+      </div>
+      <p class="astraloader__text">Inicializando sistemas...</p>
+    </div>
+  </div>
+
+  <!-- CURSOR (desktop only) -->
+  <div class="astracursor" id="astracursor" aria-hidden="true">
+    <div class="astracursor__ring" id="cursorRing"></div>
+    <div class="astracursor__dot" id="cursorDot"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="astranav" id="astranav">
+    <div class="astranav__inner">
+      <a href="#hero" class="astranav__logo">
+        <img src="img/Logo%20empresa.png" alt="ASTRACODE VR" class="astranav__logo-img" />
+        <span class="astranav__logo-text">ASTRACODE <span>VR</span></span>
+      </a>
+      <button class="astranav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="astranav__menu" id="navMenu" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="#hero" class="astranav__link">Inicio</a></li>
+          <li><a href="#about" class="astranav__link">Sobre mí</a></li>
+          <li><a href="#skills" class="astranav__link">Habilidades</a></li>
+          <li><a href="#projects" class="astranav__link">Proyectos</a></li>
+          <li><a href="#services" class="astranav__link">Servicios</a></li>
+          <li><a href="#contact" class="astranav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="astrahero" id="hero">
+    <canvas class="astrahero__canvas" id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="astrahero__bg" aria-hidden="true"></div>
+    <div class="astrahero__grid-bg" aria-hidden="true"></div>
+
+    <div class="astrahero__body">
+      <div class="astrahero__profile">
+        <div class="astrahero__avatar">
+          <img src="img/Logo%20empresa.png" alt="ASTRACODE VR" width="400" height="400" />
+        </div>
+      </div>
+
+      <div class="astrahero__text parallax-layer" data-speed="0.15">
+        <p class="astrahero__greeting">&lt;Hola, soy /&gt;</p>
+        <h1 class="astrahero__name glitch" data-text="Gibran Vasquez">Gibran Vasquez</h1>
+        <p class="astrahero__role" id="typewriter">
+          <span class="astrahero__type-text" id="typeText"></span>
+          <span class="astrahero__type-cursor" aria-hidden="true">|</span>
+        </p>
+        <div class="astrahero__info">
+          <span><i class="fa-solid fa-location-dot"></i> Tlaxiaco, Oaxaca</span>
+          <span><i class="fa-solid fa-envelope"></i> gibranvasquez5@gmail.com</span>
+          <span><i class="fa-solid fa-briefcase"></i> Full-Stack Developer</span>
+        </div>
+        <p class="astrahero__brand">Marca <strong>ASTRACODE <span>VR</span></strong></p>
+        <div class="astrahero__actions">
+          <a href="#projects" class="astrabtn astrabtn--primary">
+            <span>Ver proyectos</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="astrabtn astrabtn--outline">
+            <span>Contactar</span>
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://github.com/GibranVasquez" target="_blank" rel="noopener" class="astrabtn astrabtn--social" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="astrahero__scroll parallax-layer" data-speed="0.05" aria-hidden="true">
+      <span>Desplázate</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="astrasection astrasection--dark" id="about">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Sobre Mí //</span>
+        <h2 class="astrasection__title">Conoce más <span>sobre mí</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astrapersonal">
+        <div class="astrapersonal__photo reveal">
+          <div class="astrapersonal__avatar">
+            <img src="img/Gibran.jpeg" alt="Gibran Vasquez" width="400" height="400" />
+          </div>
+          <div class="astrapersonal__social">
+            <a href="https://github.com/GibranVasquez" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:gibranvasquez5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="astrapersonal__info reveal">
+          <h3 class="astrapersonal__name">Gibran Jesus Vasquez Reyes</h3>
+          <p class="astrapersonal__title">Desarrollador Full-Stack & Estudiante de Ingeniería</p>
+          <p class="astrapersonal__desc">Estudiante de Ingeniería en Sistemas Computacionales en el <strong>Instituto Tecnológico de Tlaxiaco (TECNM)</strong>. Apasionado por crear soluciones digitales modernas, eficientes y escalables bajo la marca <strong>ASTRACODE VR</strong>.</p>
+          <div class="astrapersonal__details">
+            <div class="astrapersonal__detail">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Ubicación</strong>
+                <span>Tlaxiaco, Oaxaca, México</span>
+              </div>
+            </div>
+            <div class="astrapersonal__detail">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span>gibranvasquez5@gmail.com</span>
+              </div>
+            </div>
+            <div class="astrapersonal__detail">
+              <i class="fa-solid fa-briefcase"></i>
+              <div>
+                <strong>Disponibilidad</strong>
+                <span>Freelance / Tiempo completo</span>
+              </div>
+            </div>
+            <div class="astrapersonal__detail">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>Educación</strong>
+                <span>TECNM Tlaxiaco — Ing. Sistemas</span>
+              </div>
+            </div>
+            <div class="astrapersonal__detail">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <strong>GitHub</strong>
+                <span>GibranVasquez</span>
+              </div>
+            </div>
+            <div class="astrapersonal__detail">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <strong>Especialidad</strong>
+                <span>Java, Spring Boot, Full-Stack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="astrasection" id="stats">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Estadísticas //</span>
+        <h2 class="astrasection__title">Números que <span>hablan</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astrastats reveal" id="statsSection">
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-code"></i></span>
+            <span class="astrastats__num" data-count="5">0</span>
+            <span class="astrastats__label">Proyectos completados</span>
+          </div>
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-microchip"></i></span>
+            <span class="astrastats__num" data-count="15">0</span>
+            <span class="astrastats__label">Tecnologías dominadas</span>
+          </div>
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-lines-leaning"></i></span>
+            <span class="astrastats__num" data-count="15000">0</span>
+            <span class="astrastats__label">Líneas de código</span>
+          </div>
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-face-smile"></i></span>
+            <span class="astrastats__num" data-count="100">0</span>
+            <span class="astrastats__label">Satisfacción</span>
+          </div>
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-clock"></i></span>
+            <span class="astrastats__num" data-count="3">0</span>
+            <span class="astrastats__label">Años de experiencia</span>
+          </div>
+          <div class="astrastats__item">
+            <span class="astrastats__icon"><i class="fa-solid fa-certificate"></i></span>
+            <span class="astrastats__num" data-count="8">0</span>
+            <span class="astrastats__label">Certificaciones</span>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="astrasection astrasection--dark" id="skills">
+    <canvas class="astramatrix" id="matrixCanvas" aria-hidden="true"></canvas>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Habilidades //</span>
+        <h2 class="astrasection__title">Tecnologías &amp; <span>dominio</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astraskills" id="skillsGrid">
+        <div class="astraskills__item" data-progress="95">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-html5"></i></div>
+          </div>
+          <span class="astraskills__name">HTML5</span>
+          <span class="astraskills__pct">95%</span>
+        </div>
+        <div class="astraskills__item" data-progress="90">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-css3-alt"></i></div>
+          </div>
+          <span class="astraskills__name">CSS3</span>
+          <span class="astraskills__pct">90%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <span class="astraskills__name">JavaScript</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-vuejs"></i></div>
+          </div>
+          <span class="astraskills__name">Vue.js</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-angular"></i></div>
+          </div>
+          <span class="astraskills__name">Angular</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="88">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-java"></i></div>
+          </div>
+          <span class="astraskills__name">Java</span>
+          <span class="astraskills__pct">88%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-leaf"></i></div>
+          </div>
+          <span class="astraskills__name">Spring Boot</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="75">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-php"></i></div>
+          </div>
+          <span class="astraskills__name">PHP</span>
+          <span class="astraskills__pct">75%</span>
+        </div>
+        <div class="astraskills__item" data-progress="65">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-python"></i></div>
+          </div>
+          <span class="astraskills__name">Python</span>
+          <span class="astraskills__pct">65%</span>
+        </div>
+        <div class="astraskills__item" data-progress="50">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-golang"></i></div>
+          </div>
+          <span class="astraskills__name">Go</span>
+          <span class="astraskills__pct">50%</span>
+        </div>
+        <div class="astraskills__item" data-progress="55">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-flutter"></i></div>
+          </div>
+          <span class="astraskills__name">Flutter</span>
+          <span class="astraskills__pct">55%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-database"></i></div>
+          </div>
+          <span class="astraskills__name">MySQL</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-database"></i></div>
+          </div>
+          <span class="astraskills__name">PostgreSQL</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-git-alt"></i></div>
+          </div>
+          <span class="astraskills__name">Git</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="60">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-brain"></i></div>
+          </div>
+          <span class="astraskills__name">IA</span>
+          <span class="astraskills__pct">60%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="astrasection" id="projects">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Proyectos //</span>
+        <h2 class="astrasection__title">Trabajos <span>recientes</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astraprojects">
+        <div class="astraprojects__card tilt-card reveal">
+          <div class="astraprojects__img">
+            <div class="astraprojects__thumb astraprojects__thumb--barber">
+              <i class="fa-solid fa-scissors"></i>
+              <span>BarberKing</span>
+            </div>
+            <div class="astraprojects__overlay">
+              <div class="astraprojects__tags">
+                <span>HTML5</span><span>CSS3</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="astraprojects__body">
+            <h3 class="astraprojects__title">BarberKing</h3>
+            <p class="astraprojects__desc">Landing page profesional para barbería con diseño oscuro/elegancia, galería con filtros, testimonios slider y formulario con validación.</p>
+            <div class="astraprojects__footer">
+              <a href="../barberia/index.html" class="astrabtn astrabtn--small astrabtn--primary" target="_blank" rel="noopener">
+                <i class="fa-solid fa-eye"></i> Ver proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="astraprojects__card tilt-card reveal">
+          <div class="astraprojects__img">
+            <div class="astraprojects__thumb astraprojects__thumb--tulum">
+              <i class="fa-solid fa-fire"></i>
+              <span>La Brasa Tulum</span>
+            </div>
+            <div class="astraprojects__overlay">
+              <div class="astraprojects__tags">
+                <span>HTML5</span><span>CSS3</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+          <div class="astraprojects__body">
+            <h3 class="astraprojects__title">La Brasa Tulum</h3>
+            <p class="astraprojects__desc">Landing page para restaurante con temática Tulum, paleta teal/terracota, menú interactivo con tabs, mapa y formulario de reservaciones.</p>
+            <div class="astraprojects__footer">
+              <a href="../restaurante/index.html" class="astrabtn astrabtn--small astrabtn--primary" target="_blank" rel="noopener">
+                <i class="fa-solid fa-eye"></i> Ver proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="astraprojects__card tilt-card reveal">
+          <div class="astraprojects__img">
+            <div class="astraprojects__thumb astraprojects__thumb--gym">
+              <i class="fa-solid fa-dumbbell"></i>
+              <span>TITAN Fitness</span>
+            </div>
+            <div class="astraprojects__overlay">
+              <div class="astraprojects__tags">
+                <span>HTML5</span><span>CSS3</span><span>JS</span><span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+          <div class="astraprojects__body">
+            <h3 class="astraprojects__title">TITAN Fitness</h3>
+            <p class="astraprojects__desc">Landing page para gimnasio con diseño cyberpunk, efecto glitch, galería con lightbox, planes de precios, carrusel de testimonios y tienda integrada.</p>
+            <div class="astraprojects__footer">
+              <a href="../gym/index.html" class="astrabtn astrabtn--small astrabtn--primary" target="_blank" rel="noopener">
+                <i class="fa-solid fa-eye"></i> Ver proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="astrasection astrasection--dark" id="services">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Servicios //</span>
+        <h2 class="astrasection__title">¿Qué puedo hacer <span>por ti?</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astraservices">
+        <div class="astraservices__card reveal">
+          <div class="astraservices__icon"><i class="fa-solid fa-globe"></i></div>
+          <h3 class="astraservices__title">Páginas web profesionales</h3>
+          <p class="astraservices__desc">Sitios web modernos, rápidos y responsivos para tu negocio o marca personal.</p>
+        </div>
+        <div class="astraservices__card reveal">
+          <div class="astraservices__icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3 class="astraservices__title">Landing pages de alto impacto</h3>
+          <p class="astraservices__desc">Páginas de aterrizaje optimizadas para conversión con diseños atractivos y únicos.</p>
+        </div>
+        <div class="astraservices__card reveal">
+          <div class="astraservices__icon"><i class="fa-solid fa-plug"></i></div>
+          <h3 class="astraservices__title">Integración de APIs</h3>
+          <p class="astraservices__desc">Conexión de servicios externos, REST APIs y microservicios para potenciar tu plataforma.</p>
+        </div>
+        <div class="astraservices__card reveal">
+          <div class="astraservices__icon"><i class="fa-solid fa-robot"></i></div>
+          <h3 class="astraservices__title">Automatización con IA</h3>
+          <p class="astraservices__desc">Soluciones inteligentes para automatizar procesos y mejorar la eficiencia operativa.</p>
+        </div>
+        <div class="astraservices__card reveal">
+          <div class="astraservices__icon"><i class="fa-solid fa-database"></i></div>
+          <h3 class="astraservices__title">Bases de datos</h3>
+          <p class="astraservices__desc">Diseño, implementación y optimización de bases de datos relacionales y no relacionales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="astrasection" id="contact">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Contacto //</span>
+        <h2 class="astrasection__title">Hablemos de tu <span>próximo proyecto</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astracontact">
+        <form class="astracontact__form reveal" id="contactForm" novalidate>
+          <div class="astracontact__field">
+            <input type="text" id="contactName" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+            <span class="astracontact__line"></span>
+            <span class="astracontact__error">El nombre es obligatorio</span>
+          </div>
+          <div class="astracontact__field">
+            <input type="email" id="contactEmail" name="email" placeholder="Tu email" required autocomplete="email" />
+            <span class="astracontact__line"></span>
+            <span class="astracontact__error">Ingresa un email válido</span>
+          </div>
+          <div class="astracontact__field">
+            <textarea id="contactMsg" name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <span class="astracontact__line"></span>
+            <span class="astracontact__error">El mensaje no puede estar vacío</span>
+          </div>
+          <button type="submit" class="astrabtn astrabtn--primary astracontact__submit">
+            <span>Enviar mensaje</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="astracontact__success" id="contactSuccess">
+            <i class="fa-solid fa-circle-check"></i> Mensaje enviado con éxito
+          </p>
+        </form>
+
+        <div class="astracontact__links reveal">
+          <h3 class="astracontact__links-title">Información de contacto</h3>
+          <a href="mailto:gibranvasquez5@gmail.com" class="astracontact__link" aria-label="Enviar correo">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>gibranvasquez5@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/GibranVasquez" target="_blank" rel="noopener" class="astracontact__link" aria-label="Visitar GitHub">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <span>GibranVasquez</span>
+            </div>
+          </a>
+          <a href="#" class="astracontact__link" aria-label="Ubicación">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Ubicación</strong>
+              <span>Tlaxiaco, Oaxaca, México</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="astrafooter">
+    <div class="astrafooter__line"></div>
+    <div class="container">
+      <div class="astrafooter__inner">
+        <div class="astrafooter__brand">
+          <img src="img/Logo%20empresa.png" alt="ASTRACODE VR" class="astrafooter__logo" />
+          <strong>ASTRACODE VR</strong>
+        </div>
+        <p>&copy; 2025 — Gibran Jesus Vasquez Reyes. Todos los derechos reservados.</p>
+        <div class="astrafooter__social">
+          <a href="https://github.com/GibranVasquez" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:gibranvasquez5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

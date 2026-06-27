@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Brasa Tulum &mdash; Cocina de Fuego</title>
+  <meta name="description" content="La Brasa Tulum - Cocina de fuego y tradición con alma caribeña." />
+  <meta name="theme-color" content="#0D3B43" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader__plate">
+      <div class="loader__ring"></div>
+      <div class="loader__utensils">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+    </div>
+    <span class="loader__brand">La Brasa</span>
+    <span class="loader__sub">Tulum</span>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <i class="fa-solid fa-fire header__logo-icon"></i>
+        La <span class="header__logo--accent">Brasa</span>
+        <span class="header__logo-sub">Tulum</span>
+      </a>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir men&uacute;" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" id="nav" aria-label="Navegaci&oacute;n principal">
+        <ul class="header__menu">
+          <li><a href="#hero" class="header__link">Inicio</a></li>
+          <li><a href="#menu" class="header__link">Men&uacute;</a></li>
+          <li><a href="#story" class="header__link">Historia</a></li>
+          <li><a href="#gallery" class="header__link">Galer&iacute;a</a></li>
+          <li><a href="#reservations" class="header__link">Reservas</a></li>
+          <li><a href="#contact" class="header__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-image"></div>
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__texture" aria-hidden="true"></div>
+
+      <!-- Decorative wave -->
+      <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#FDF6EC" opacity="0.12"/>
+        <path d="M0,80 C360,40 720,100 1440,80 L1440,120 L0,120 Z" fill="#FDF6EC" opacity="0.06"/>
+      </svg>
+
+      <div class="container hero__body">
+        <p class="hero__badge">
+          <span class="hero__badge-line"></span>
+          Tulum &mdash; Desde 1998
+          <span class="hero__badge-line"></span>
+        </p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Cocina de</span>
+          <span class="hero__title-line hero__title-line--accent">fuego y tradici&oacute;n</span>
+        </h1>
+        <p class="hero__subtitle">Una experiencia gastron&oacute;mica &uacute;nica donde cada platillo cuenta una historia.</p>
+        <div class="hero__actions">
+          <a href="#reservations" class="btn btn--primary">Reservar mesa</a>
+          <a href="#menu" class="btn btn--outline">Ver men&uacute;</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Descubre</span>
+        <span class="hero__scroll-dot"></span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT INTRO ===== -->
+    <section class="section about-intro" id="about-intro">
+      <div class="container">
+        <div class="about-intro__grid">
+          <div class="about-intro__content">
+            <span class="section__tag">La Brasa</span>
+            <h2 class="section__title">Donde el <span class="text--accent">fuego</span> se encuentra con el <span class="text--gold">Caribe</span></h2>
+            <p>
+              En <strong>La Brasa</strong> cada platillo nace de la pasi&oacute;n por los ingredientes
+              frescos y la tradici&oacute;n culinaria. Nuestra parrilla de carb&oacute;n es el alma del
+              restaurante, donde las llamas bailan con la brisa del Caribe.
+            </p>
+            <p>
+              Seleccionamos personalmente cada corte, cada especia y cada hierba para ofrecerte
+              sabores aut&eacute;nticos que despiertan los sentidos y te transportan a la esencia
+              de Tulum.
+            </p>
+            <div class="about-intro__signature">
+              <span class="about-intro__name">Diego Montenegro</span>
+              <span class="about-intro__role">Chef &amp; Fundador</span>
+            </div>
+          </div>
+          <figure class="about-intro__figure">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80"
+              alt="Interior de La Brasa Tulum con ambiente acogedor"
+              loading="lazy"
+            />
+            <div class="about-intro__badge">
+              <span class="about-intro__badge-num">27</span>
+              <span class="about-intro__badge-text">a&ntilde;os de<br/>tradi&oacute;n</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEPARADOR ===== -->
+    <div class="divider">
+      <span class="divider__icon"><i class="fa-solid fa-fire"></i></span>
+    </div>
+
+    <!-- ===== MENU ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Nuestra Carta</span>
+          <h2 class="section__title">Men&uacute; <span class="text--accent">Destacado</span></h2>
+          <p class="section__desc">Sabores que enamoran, platillos que se quedan en tu memoria</p>
+        </header>
+
+        <div class="menu__tabs">
+          <button class="menu__tab is-active" data-tab="starters">
+            <i class="fa-solid fa-leaf"></i>
+            <span>Entradas</span>
+          </button>
+          <button class="menu__tab" data-tab="mains">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            <span>Platos fuertes</span>
+          </button>
+          <button class="menu__tab" data-tab="desserts">
+            <i class="fa-solid fa-cake-slice"></i>
+            <span>Postres</span>
+          </button>
+        </div>
+
+        <div class="menu__panel is-active" id="tab-starters">
+          <div class="menu__grid">
+            <article class="menu-item" data-delay="0">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" alt="Bruschetta al pomodoro con albahaca fresca" loading="lazy" />
+                <div class="menu-item__badge">Recomendado</div>
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Bruschetta al Pomodoro</h3>
+                  <span class="menu-item__price">$180</span>
+                </div>
+                <p class="menu-item__desc">Pan artesanal, tomate cherry, albahaca fresca, ajo y aceite de oliva extra virgen.</p>
+                <div class="menu-item__tags">
+                  <span class="menu-item__tag">Vegetariano</span>
+                  <span class="menu-item__tag">Sin gluten</span>
+                </div>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.1">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1529563047586-90776f0a5f2c?w=500&q=80" alt="Carpaccio de res con parmesano" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Carpaccio de Res</h3>
+                  <span class="menu-item__price">$220</span>
+                </div>
+                <p class="menu-item__desc">Finas l&aacute;minas de res, parmesano, r&uacute;cula fresca y reducci&oacute;n de bals&aacute;mico.</p>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.2">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=500&q=80" alt="Sopa de cebolla gratinada" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Sopa de Cebolla</h3>
+                  <span class="menu-item__price">$160</span>
+                </div>
+                <p class="menu-item__desc">Cebolla caramelizada lentamente, caldo de res, crutones y queso gratinado al horno.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="menu__panel" id="tab-mains">
+          <div class="menu__grid">
+            <article class="menu-item" data-delay="0">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=500&q=80" alt="Filete angus a la parrilla con chimichurri" loading="lazy" />
+                <div class="menu-item__badge">M&aacute;s pedido</div>
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Filete a la Parrilla</h3>
+                  <span class="menu-item__price">$450</span>
+                </div>
+                <p class="menu-item__desc">Corte angus sellado al carb&oacute;n, chimichurri casero y vegetales asados de temporada.</p>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.1">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=500&q=80" alt="Risotto cremoso de hongos silvestres" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Risotto de Hongos</h3>
+                  <span class="menu-item__price">$320</span>
+                </div>
+                <p class="menu-item__desc">Arroz cremoso con hongos silvestres, parmesano añejo y aceite de trufa negra.</p>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.2">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80" alt="Salmón glaseado con miel y mostaza" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Salm&oacute;n Glaseado</h3>
+                  <span class="menu-item__price">$380</span>
+                </div>
+                <p class="menu-item__desc">Salm&oacute;n fresco con glaseado de miel y mostaza antigua, esp&aacute;rragos y pur&eacute; de batata.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="menu__panel" id="tab-desserts">
+          <div class="menu__grid">
+            <article class="menu-item" data-delay="0">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80" alt="Tiramisú clásico italiano" loading="lazy" />
+                <div class="menu-item__badge">Postre estrella</div>
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Tiramis&uacute; Cl&aacute;sico</h3>
+                  <span class="menu-item__price">$150</span>
+                </div>
+                <p class="menu-item__desc">Mascarpone, caf&eacute; espresso, cacao amargo y bizcochos artesanales.</p>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.1">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&q=80" alt="Crème brûlée de vainilla" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Cr&egrave;me Br&ucirc;l&eacute;e</h3>
+                  <span class="menu-item__price">$140</span>
+                </div>
+                <p class="menu-item__desc">Vainilla de Madagascar, capa crujiente de az&uacute;car caramelizado y frutos rojos.</p>
+              </div>
+            </article>
+            <article class="menu-item" data-delay="0.2">
+              <div class="menu-item__image">
+                <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=500&q=80" alt="Volcán de chocolate belga" loading="lazy" />
+              </div>
+              <div class="menu-item__body">
+                <div class="menu-item__header">
+                  <h3 class="menu-item__title">Volc&aacute;n de Chocolate</h3>
+                  <span class="menu-item__price">$170</span>
+                </div>
+                <p class="menu-item__desc">Chocolate belga fundente, helado de vainilla artesanal y polvo de oro comestible.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== STORY ===== -->
+    <section class="section story" id="story">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Nuestra Historia</span>
+          <h2 class="section__title">El arte detr&aacute;s de <span class="text--accent">cada platillo</span></h2>
+        </header>
+
+        <div class="story__inner">
+          <figure class="story__figure">
+            <img
+              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=700&q=80"
+              alt="Chef Diego Montenegro en la cocina de La Brasa Tulum"
+              loading="lazy"
+            />
+            <figcaption class="story__caption">Chef Diego Montenegro</figcaption>
+          </figure>
+
+          <div class="story__content">
+            <p class="story__lead">
+              Todo comenz&oacute; con un sue&ntilde;o, una parrilla y el esp&iacute;ritu de Tulum.
+            </p>
+            <p>
+              En 1998, <strong>Diego Montenegro</strong> abri&oacute; las puertas de La Brasa con una
+              visi&oacute;n clara: crear un espacio donde la cocina de fuego se encontrara con la
+              frescura del Caribe. Con ra&iacute;ces en la tradici&oacute;n culinaria mexicana y
+              formaci&oacute;n en Europa, Diego desarroll&oacute; un estilo &uacute;nico que hoy
+              define nuestra esencia.
+            </p>
+            <p>
+              Cada ingrediente es seleccionado a mano, cada corte es sellado con precisi&oacute;n
+              y cada platillo es una historia que contar. Porque en La Brasa no solo cocinamos,
+              creamos experiencias.
+            </p>
+
+            <div class="story__awards">
+              <div class="story__award">
+                <i class="fa-solid fa-award"></i>
+                <span>Premio Nacional de Gastronom&iacute;a 2023</span>
+              </div>
+              <div class="story__award">
+                <i class="fa-solid fa-award"></i>
+                <span>Mejor Parrilla 2024 &mdash; Gu&iacute;a Culinaria MX</span>
+              </div>
+              <div class="story__award">
+                <i class="fa-solid fa-award"></i>
+                <span>2 Soles Repsol &mdash; Cocina de Fuego</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEPARADOR ===== -->
+    <div class="divider divider--inverted">
+      <span class="divider__icon"><i class="fa-solid fa-utensils"></i></span>
+    </div>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Galer&iacute;a</span>
+          <h2 class="section__title">Una experiencia <span class="text--accent">visual</span></h2>
+          <p class="section__desc">Cada platillo es una obra de arte cuidadosamente elaborada</p>
+        </header>
+
+        <div class="gallery__grid">
+
+          <figure class="gallery__item" data-delay="0">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Platillo de entrada decorado con flores comestibles" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Entrada de Temporada</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-delay="0.1">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80" alt="Filete angus a la parrilla con vegetales asados" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Filete Angus</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-delay="0.2">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Platillo de mariscos frescos del Caribe" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Catch of the Day</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-delay="0.3">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Postre artesanal con frutos rojos" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Postre Artesanal</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-delay="0.4">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Interior elegante del restaurante" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Nuestro Sal&oacute;n</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-delay="0.5">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=600&q=80" alt="Ambiente del restaurante con velas" loading="lazy" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Ambiente &Uacute;nico</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEPARADOR ===== -->
+    <div class="divider">
+      <span class="divider__icon"><i class="fa-solid fa-wine-glass-alt"></i></span>
+    </div>
+
+    <!-- ===== RESERVATIONS ===== -->
+    <section class="section reservations" id="reservations">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Reservaciones</span>
+          <h2 class="section__title">Reserva tu <span class="text--accent">mesa</span></h2>
+          <p class="section__desc">D&eacute;janos tus datos y te confirmaremos a la brevedad</p>
+        </header>
+
+        <form class="reservations__form" id="reservationForm" novalidate>
+          <div class="reservations__grid">
+            <div class="form-group">
+              <input type="text" id="resName" name="name" class="form-group__input" placeholder=" " required />
+              <label for="resName" class="form-group__label">Nombre completo</label>
+              <span class="form-group__error">El nombre es obligatorio</span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="resEmail" name="email" class="form-group__input" placeholder=" " required />
+              <label for="resEmail" class="form-group__label">Correo electr&oacute;nico</label>
+              <span class="form-group__error">Ingresa un correo v&aacute;lido</span>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="resPhone" name="phone" class="form-group__input" placeholder=" " required />
+              <label for="resPhone" class="form-group__label">Tel&eacute;fono</label>
+              <span class="form-group__error">El tel&eacute;fono es obligatorio</span>
+            </div>
+
+            <div class="form-group">
+              <input type="date" id="resDate" name="date" class="form-group__input" placeholder=" " required />
+              <label for="resDate" class="form-group__label">Fecha</label>
+              <span class="form-group__error">Selecciona una fecha</span>
+            </div>
+
+            <div class="form-group">
+              <input type="time" id="resTime" name="time" class="form-group__input" placeholder=" " required />
+              <label for="resTime" class="form-group__label">Hora</label>
+              <span class="form-group__error">Selecciona una hora</span>
+            </div>
+
+            <div class="form-group">
+              <div class="form-group__select-wrap">
+                <select id="resGuests" name="guests" class="form-group__input form-group__input--select" required>
+                  <option value="" disabled selected></option>
+                  <option value="1">1 Persona</option>
+                  <option value="2">2 Personas</option>
+                  <option value="3">3 Personas</option>
+                  <option value="4">4 Personas</option>
+                  <option value="5">5 Personas</option>
+                  <option value="6">6 Personas</option>
+                  <option value="7">7 Personas</option>
+                  <option value="8">8+ Personas</option>
+                </select>
+                <label for="resGuests" class="form-group__label">Comensales</label>
+                <span class="form-group__error">Selecciona el n&uacute;mero de personas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group form-group--full">
+            <textarea id="resMessage" name="message" class="form-group__input form-group__input--textarea" rows="3" placeholder=" "></textarea>
+            <label for="resMessage" class="form-group__label">Comentarios u ocasiones especiales (opcional)</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            <span>Solicitar reservaci&oacute;n</span>
+            <i class="fa-solid fa-calendar-check"></i>
+          </button>
+
+          <p class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            Solicitud enviada. Te confirmaremos v&iacute;a email.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Ubicaci&oacute;n</span>
+          <h2 class="section__title">Te esperamos <span class="text--accent">con los brazos abiertos</span></h2>
+        </header>
+
+        <div class="contact__grid">
+
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.5!2d-103.35!3d20.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQwJzEyLjAiTiAxMDPCsDIxJzAwLjAiVw!5e0!3m2!1ses!2smx!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              title="Ubicaci&oacute;n de La Brasa Tulum"
+            ></iframe>
+          </div>
+
+          <div class="contact__info">
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <h3 class="contact__item-title">Direcci&oacute;n</h3>
+                <p class="contact__item-text">Calle del Sol 456, Col. Centro<br />Tulum, Quintana Roo, CP 77780</p>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <h3 class="contact__item-title">Tel&eacute;fono</h3>
+                <a href="tel:+529841234567" class="contact__item-link">+52 984 123 4567</a>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <h3 class="contact__item-title">Email</h3>
+                <a href="mailto:hola@labrasatulum.mx" class="contact__item-link">hola@labrasatulum.mx</a>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <h3 class="contact__item-title">Horarios</h3>
+                <p class="contact__item-text">
+                  Mar &ndash; Jue: 1:00 PM &ndash; 11:00 PM<br />
+                  Vie &ndash; S&aacute;b: 1:00 PM &ndash; 12:00 AM<br />
+                  Dom: 1:00 PM &ndash; 9:00 PM<br />
+                  <strong class="text--terracotta">Lun: Cerrado</strong>
+                </p>
+              </div>
+            </article>
+
+            <div class="contact__social">
+              <a href="#" class="contact__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="contact__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="contact__social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" class="contact__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo"><i class="fa-solid fa-fire"></i> La Brasa</span>
+        <p class="footer__tagline">Cocina de fuego con alma caribe&ntilde;a</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#hero">Inicio</a>
+        <a href="#menu">Men&uacute;</a>
+        <a href="#story">Historia</a>
+        <a href="#gallery">Galer&iacute;a</a>
+        <a href="#reservations">Reservas</a>
+        <a href="#contact">Contacto</a>
+      </div>
+
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="footer__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+      <p class="footer__copy">&copy; 2026 La Brasa Tulum.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

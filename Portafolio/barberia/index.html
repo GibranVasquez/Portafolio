@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BarberKing &mdash; Barber&iacute;a Premium</title>
+  <meta name="description" content="BarberKing - Tu barbería de confianza. Cortes modernos, barba tradicional y la mejor experiencia." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader__content">
+      <span class="loader__icon">&#9986;</span>
+      <span class="loader__brand">BarberKing</span>
+      <div class="loader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <span class="header__logo-icon">&#9986;</span>
+        Barber<span class="header__logo--accent">King</span>
+      </a>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir men&uacute;" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" id="nav" aria-label="Navegaci&oacute;n principal">
+        <ul class="header__menu">
+          <li><a href="#hero" class="header__link" data-delay="0">Inicio</a></li>
+          <li><a href="#services" class="header__link" data-delay="0.1">Servicios</a></li>
+          <li><a href="#gallery" class="header__link" data-delay="0.2">Galer&iacute;a</a></li>
+          <li><a href="#about" class="header__link" data-delay="0.3">Nosotros</a></li>
+          <li><a href="#contact" class="header__link" data-delay="0.4">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+
+      <!-- Partículas decorativas -->
+      <div class="hero__particles" id="particles" aria-hidden="true"></div>
+
+      <div class="container hero__body">
+        <p class="hero__badge">&#9986; Desde 2018</p>
+        <h1 class="hero__title" id="heroTitle">
+          <span class="hero__title-line">Estilo que</span>
+          <span class="hero__title-line hero__title-line--gold">habla por ti</span>
+        </h1>
+        <p class="hero__subtitle">Cortes modernos, tradici&oacute;n artesanal y la mejor experiencia para tu look.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Agenda tu cita</a>
+          <a href="#gallery" class="btn btn--outline">Ver trabajos</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Nuestros Servicios</span>
+          <h2 class="section__title">Servicios <span class="text--gold">&amp; Precios</span></h2>
+          <p class="section__desc">Calidad premium a precios justos</p>
+        </header>
+
+        <div class="services__grid">
+
+          <article class="service" data-delay="0">
+            <div class="service__icon"><i class="fa-solid fa-scissors"></i></div>
+            <h3 class="service__title">Corte Cl&aacute;sico</h3>
+            <p class="service__desc">Corte a tijera o m&aacute;quina con acabado a navaja y toalla caliente.</p>
+            <span class="service__price">$250</span>
+            <div class="service__shine"></div>
+          </article>
+
+          <article class="service" data-delay="0.1">
+            <div class="service__icon"><i class="fa-solid fa-razor"></i></div>
+            <h3 class="service__title">Arreglo de Barba</h3>
+            <p class="service__desc">Delineado con navaja, toalla caliente y b&aacute;lsamo hidratante.</p>
+            <span class="service__price">$180</span>
+            <div class="service__shine"></div>
+          </article>
+
+          <article class="service" data-delay="0.2">
+            <div class="service__icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+            <h3 class="service__title">Corte + Barba</h3>
+            <p class="service__desc">Nuestro combo estrella: corte y barba completos.</p>
+            <span class="service__price">$380</span>
+            <div class="service__shine"></div>
+          </article>
+
+          <article class="service" data-delay="0.3">
+            <div class="service__icon"><i class="fa-solid fa-child"></i></div>
+            <h3 class="service__title">Corte Infantil</h3>
+            <p class="service__desc">Corte r&aacute;pido y divertido para los m&aacute;s peque&ntilde;os.</p>
+            <span class="service__price">$200</span>
+            <div class="service__shine"></div>
+          </article>
+
+          <article class="service" data-delay="0.4">
+            <div class="service__icon"><i class="fa-solid fa-palette"></i></div>
+            <h3 class="service__title">Dise&ntilde;o &amp; Color</h3>
+            <p class="service__desc">Dise&ntilde;os personalizados, decolorados y tintes modernos.</p>
+            <span class="service__price">$350</span>
+            <div class="service__shine"></div>
+          </article>
+
+          <article class="service" data-delay="0.5">
+            <div class="service__icon"><i class="fa-solid fa-spa"></i></div>
+            <h3 class="service__title">Tratamiento Capilar</h3>
+            <p class="service__desc">Hidrataci&oacute;n profunda, keratina y revitalizaci&oacute;n capilar.</p>
+            <span class="service__price">$300</span>
+            <div class="service__shine"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Nuestro Portafolio</span>
+          <h2 class="section__title">Nuestro <span class="text--gold">Trabajo</span></h2>
+          <p class="section__desc">Resultados que hablan por s&iacute; solos</p>
+        </header>
+
+        <div class="gallery__filters">
+          <button class="gallery__filter is-active" data-filter="all">Todos</button>
+          <button class="gallery__filter" data-filter="corte">Cortes</button>
+          <button class="gallery__filter" data-filter="barba">Barba</button>
+          <button class="gallery__filter" data-filter="diseno">Dise&ntilde;o</button>
+        </div>
+
+        <div class="gallery__grid" id="galleryGrid">
+
+          <figure class="gallery__item" data-category="corte" data-delay="0">
+            <img
+              src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80"
+              alt="Corte degradado moderno realizado en BarberKing"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Corte Degradado</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="barba" data-delay="0.1">
+            <img
+              src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80"
+              alt="Arreglo de barba perfilada con navaja"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Barba Perfilada</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="corte" data-delay="0.2">
+            <img
+              src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=600&q=80"
+              alt="Corte clásico estilo vintage"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Corte Cl&aacute;sico</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="diseno" data-delay="0.3">
+            <img
+              src="https://images.unsplash.com/photo-1567894340315-735d7c361db7?w=600&q=80"
+              alt="Diseño capilar con líneas degradadas"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Dise&ntilde;o Capilar</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="corte" data-delay="0.4">
+            <img
+              src="https://images.unsplash.com/photo-1593702288056-2a16027bd65e?w=600&q=80"
+              alt="Corte moderno estilo fade"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Modern Fade</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="diseno" data-delay="0.5">
+            <img
+              src="https://images.unsplash.com/photo-1634302086191-84e6cadb23f9?w=600&q=80"
+              alt="Tinte y coloración capilar profesional"
+              loading="lazy"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__caption-title">Tinte &amp; Color</span>
+              <span class="gallery__caption-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Nuestra Historia</span>
+          <h2 class="section__title">Sobre <span class="text--gold">Nosotros</span></h2>
+        </header>
+
+        <div class="about__inner">
+          <div class="about__content">
+            <p class="about__lead">
+              En <strong>BarberKing</strong> combinamos la tradici&oacute;n de la barber&iacute;a cl&aacute;sica
+              con las tendencias m&aacute;s modernas.
+            </p>
+            <p>
+              Desde 2018 nos dedicamos a realzar tu estilo con cortes precisos, barbas impecables
+              y un ambiente &uacute;nico. Nuestro equipo de barberos profesionales est&aacute; en
+              constante capacitaci&oacute;n para ofrecerte la mejor experiencia.
+            </p>
+            <p>
+              Cada visita es m&aacute;s que un corte, es un momento para ti. Porque en BarberKing
+              creemos que el cuidado personal no es un lujo, es una necesidad.
+            </p>
+
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-number" data-count="5000">0</span>
+                <span class="about__stat-label">Clientes Felices</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number" data-count="6">0</span>
+                <span class="about__stat-label">A&ntilde;os de Experiencia</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number" data-count="15">0</span>
+                <span class="about__stat-label">Barberos Expertos</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number" data-count="98">0</span>
+                <span class="about__stat-label">% Satisfacci&oacute;n</span>
+              </div>
+            </div>
+          </div>
+
+          <figure class="about__figure about__figure--1">
+            <img
+              src="https://images.unsplash.com/photo-1585747861115-7bb0a8ba8b9d?w=700&q=80"
+              alt="Interior de la barbería BarberKing con barberos profesionales"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Testimonios</span>
+          <h2 class="section__title">Lo que dicen <span class="text--gold">nuestros clientes</span></h2>
+        </header>
+
+        <div class="testimonials__slider" id="testimonialSlider">
+          <article class="testimonial is-active">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial__text">
+              "La mejor barbería de la ciudad. El atención es increíble y siempre salgo con un corte espectacular."
+            </blockquote>
+            <div class="testimonial__author">
+              <span class="testimonial__name">Carlos M.</span>
+              <span class="testimonial__role">Cliente frecuente</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial__text">
+              "Desde que voy a BarberKing no cambio de barbero. El combo corte + barba es mi favorito. 100% recomendado."
+            </blockquote>
+            <div class="testimonial__author">
+              <span class="testimonial__name">Andr&eacute;s G.</span>
+              <span class="testimonial__role">Cliente 3 a&ntilde;os</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <div class="testimonial__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial__text">
+              "Profesionalismo y calidad. El ambiente es único y siempre te hacen sentir como en casa. ¡Excelente servicio!"
+            </blockquote>
+            <div class="testimonial__author">
+              <span class="testimonial__name">Roberto L.</span>
+              <span class="testimonial__role">Cliente frecuente</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonials__dots" id="testimonialDots">
+          <button class="testimonials__dot is-active" data-index="0" aria-label="Testimonio 1"></button>
+          <button class="testimonials__dot" data-index="1" aria-label="Testimonio 2"></button>
+          <button class="testimonials__dot" data-index="2" aria-label="Testimonio 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__tag">Contacto</span>
+          <h2 class="section__title">Cont&aacute;ctanos</h2>
+          <p class="section__desc">Reserva tu cita o env&iacute;anos un mensaje</p>
+        </header>
+
+        <div class="contact__grid">
+
+          <div class="contact__info">
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <h3 class="contact__item-title">Ubicaci&oacute;n</h3>
+                <p class="contact__item-text">Av. Principal 1234, Col. Centro<br />Ciudad, CP 45000</p>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <h3 class="contact__item-title">Tel&eacute;fono</h3>
+                <a href="tel:+523331234567" class="contact__item-link">+52 33 3123 4567</a>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <h3 class="contact__item-title">Email</h3>
+                <a href="mailto:hola@barberking.mx" class="contact__item-link">hola@barberking.mx</a>
+              </div>
+            </article>
+
+            <article class="contact__item">
+              <span class="contact__item-circle"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <h3 class="contact__item-title">Horario</h3>
+                <p class="contact__item-text">Lun &ndash; S&aacute;b: 9:00 AM &ndash; 8:00 PM<br />Dom: 10:00 AM &ndash; 5:00 PM</p>
+              </div>
+            </article>
+
+            <div class="contact__social">
+              <a href="#" class="contact__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="contact__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="contact__social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" class="contact__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-group__input" placeholder=" " required />
+              <label for="name" class="form-group__label">Nombre completo</label>
+              <span class="form-group__error">El nombre es obligatorio</span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-group__input" placeholder=" " required />
+              <label for="email" class="form-group__label">Correo electr&oacute;nico</label>
+              <span class="form-group__error">Ingresa un correo v&aacute;lido</span>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-group__input" placeholder=" " />
+              <label for="phone" class="form-group__label">Tel&eacute;fono (opcional)</label>
+            </div>
+
+            <div class="form-group">
+              <div class="form-group__select-wrap">
+                <select id="service" name="service" class="form-group__input form-group__input--select">
+                  <option value="" disabled selected></option>
+                  <option value="corte">Corte Clásico</option>
+                  <option value="barba">Arreglo de Barba</option>
+                  <option value="combo">Corte + Barba</option>
+                  <option value="infantil">Corte Infantil</option>
+                  <option value="diseno">Diseño & Color</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <label for="service" class="form-group__label">Servicio de inter&eacute;s</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" class="form-group__input form-group__input--textarea" rows="4" placeholder=" " required></textarea>
+              <label for="message" class="form-group__label">Mensaje</label>
+              <span class="form-group__error">El mensaje debe tener al menos 10 caracteres</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+              <span>Enviar mensaje</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              Mensaje enviado con &eacute;xito. Te contactaremos pronto.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">&#9986; BarberKing</span>
+        <p class="footer__tagline">Tu estilo, nuestra pasi&oacute;n</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#hero">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#gallery">Galer&iacute;a</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contacto</a>
+      </div>
+
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="footer__social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+      <p class="footer__copy">&copy; 2026 BarberKing. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
