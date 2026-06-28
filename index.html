@@ -43,7 +43,7 @@
   <!-- NAVBAR -->
   <header class="astranav" id="astranav">
     <div class="astranav__inner">
-      <a href="#hero" class="astranav__logo">
+      <a href="#inicio" class="astranav__logo">
         <img src="img/Logo%20empresa.png" alt="ASTRACODE VR" class="astranav__logo-img" />
         <span class="astranav__logo-text">ASTRACODE <span>VR</span></span>
       </a>
@@ -52,19 +52,21 @@
       </button>
       <nav class="astranav__menu" id="navMenu" role="navigation" aria-label="Menú principal">
         <ul>
-          <li><a href="#hero" class="astranav__link">Inicio</a></li>
-          <li><a href="#about" class="astranav__link">Sobre mí</a></li>
-          <li><a href="#services" class="astranav__link">Servicios</a></li>
-          <li><a href="#projects" class="astranav__link">Proyectos</a></li>
+          <li><a href="#inicio" class="astranav__link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="astranav__link">Sobre mí</a></li>
+          <li><a href="#habilidades" class="astranav__link">Habilidades</a></li>
+          <li><a href="#servicios" class="astranav__link">Servicios</a></li>
+          <li><a href="#planes" class="astranav__link">Planes</a></li>
+          <li><a href="#proyectos" class="astranav__link">Proyectos</a></li>
           <li><a href="#proceso" class="astranav__link">Proceso</a></li>
-          <li><a href="#contact" class="astranav__link">Contacto</a></li>
+          <li><a href="#contacto" class="astranav__link">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="astrahero" id="hero">
+  <section class="astrahero" id="inicio">
     <canvas class="astrahero__canvas" id="particleCanvas" aria-hidden="true"></canvas>
     <div class="astrahero__bg" aria-hidden="true"></div>
     <div class="astrahero__grid-bg" aria-hidden="true"></div>
@@ -90,15 +92,15 @@
         </div>
         <p class="astrahero__brand">Marca <strong>ASTRACODE <span>VR</span></strong></p>
         <div class="astrahero__actions">
-          <a href="#projects" class="astrabtn astrabtn--primary">
+          <a href="#proyectos" class="astrabtn astrabtn--primary">
             <span>Ver proyectos</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#contact" class="astrabtn astrabtn--outline">
+          <a href="#contacto" class="astrabtn astrabtn--outline">
             <span>Contactar</span>
             <i class="fa-solid fa-envelope"></i>
           </a>
-          <a href="#servicios" class="astrabtn astrabtn--neon">
+          <a href="#planes" class="astrabtn astrabtn--neon">
             <span>Ver planes</span>
             <i class="fa-solid fa-layer-group"></i>
           </a>
@@ -116,7 +118,7 @@
   </section>
 
   <!-- SOBRE MI -->
-  <section class="astrasection astrasection--dark" id="about">
+  <section class="astrasection astrasection--dark" id="sobre-mi">
     <div class="container">
       <div class="astrasection__header reveal">
         <span class="astrasection__tag">// Sobre Mí //</span>
@@ -187,8 +189,221 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
+  <section class="astrasection astrasection--dark" id="habilidades">
+    <canvas class="astramatrix" id="matrixCanvas" aria-hidden="true"></canvas>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Habilidades //</span>
+        <h2 class="astrasection__title">Skills & <span>Tecnologías</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astraskills" id="skillsSection">
+        <div class="astraskills__item" data-progress="90">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-java"></i></div>
+          </div>
+          <span class="astraskills__name">Java</span>
+          <span class="astraskills__pct">90%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-js"></i></div>
+          </div>
+          <span class="astraskills__name">JavaScript</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-html5"></i></div>
+          </div>
+          <span class="astraskills__name">HTML5</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-css3-alt"></i></div>
+          </div>
+          <span class="astraskills__name">CSS3</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="75">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-spring"></i></div>
+          </div>
+          <span class="astraskills__name">Spring Boot</span>
+          <span class="astraskills__pct">75%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-python"></i></div>
+          </div>
+          <span class="astraskills__name">Python</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-react"></i></div>
+          </div>
+          <span class="astraskills__name">React</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="65">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          </div>
+          <span class="astraskills__name">Flutter</span>
+          <span class="astraskills__pct">65%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-php"></i></div>
+          </div>
+          <span class="astraskills__name">PHP</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-node-js"></i></div>
+          </div>
+          <span class="astraskills__name">Node.js</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="75">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-bootstrap"></i></div>
+          </div>
+          <span class="astraskills__name">Bootstrap</span>
+          <span class="astraskills__pct">75%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-github"></i></div>
+          </div>
+          <span class="astraskills__name">GitHub</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-linux"></i></div>
+          </div>
+          <span class="astraskills__name">Linux</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-docker"></i></div>
+          </div>
+          <span class="astraskills__name">Docker</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="80">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-m"></i></div>
+          </div>
+          <span class="astraskills__name">MySQL</span>
+          <span class="astraskills__pct">80%</span>
+        </div>
+        <div class="astraskills__item" data-progress="70">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-database"></i></div>
+          </div>
+          <span class="astraskills__name">PostgreSQL</span>
+          <span class="astraskills__pct">70%</span>
+        </div>
+        <div class="astraskills__item" data-progress="85">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-brands fa-git-alt"></i></div>
+          </div>
+          <span class="astraskills__name">Git</span>
+          <span class="astraskills__pct">85%</span>
+        </div>
+        <div class="astraskills__item" data-progress="60">
+          <div class="astraskills__circle">
+            <svg viewBox="0 0 120 120">
+              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
+              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
+            </svg>
+            <div class="astraskills__icon"><i class="fa-solid fa-brain"></i></div>
+          </div>
+          <span class="astraskills__name">IA</span>
+          <span class="astraskills__pct">60%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
-  <section class="astrasection astrasection--dark" id="services">
+  <section class="astrasection astrasection--dark" id="servicios">
     <div class="container">
       <div class="astrasection__header reveal">
         <span class="astrasection__tag">// Servicios //</span>
@@ -226,8 +441,193 @@
     </div>
   </section>
 
+  <!-- PLANES - PRECIOS -->
+  <section class="astrasection" id="planes">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Planes //</span>
+        <h2 class="astrasection__title">Planes para tu <span>proyecto</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <div class="astraservices-plans__toggle reveal">
+        <span class="astraservices-plans__toggle-label billing-label active" data-period="monthly">Mensual</span>
+        <button class="astraservices-plans__toggle-switch" id="billingToggle" aria-label="Cambiar periodo">
+          <span class="astraservices-plans__toggle-knob"></span>
+        </button>
+        <span class="astraservices-plans__toggle-label billing-label" data-period="yearly">Anual</span>
+      </div>
+
+      <div class="astraservices-plans">
+        <!-- PLAN STARTER -->
+        <div class="astraservices-plan reveal">
+          <div class="astraservices-plan__header">
+            <h3 class="astraservices-plan__name">Plan Starter</h3>
+            <p class="astraservices-plan__sub">Presencia Digital</p>
+          </div>
+          <div class="astraservices-plan__price">
+            <span class="astraservices-plan__amount">$2,499</span>
+            <span class="astraservices-plan__currency">MXN</span>
+          </div>
+          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
+          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 5 a 7 días hábiles</p>
+          <p class="astraservices-plan__ideal">Ideal para: pequeños negocios, consultorios, cafeterías, restaurantes, talleres, gimnasios, estéticas y profesionales independientes que desean tener presencia en internet.</p>
+          <ul class="astraservices-plan__list">
+            <li><i class="fa-solid fa-check"></i> Diseño web completamente personalizado</li>
+            <li><i class="fa-solid fa-check"></i> Hasta 5 secciones</li>
+            <li><i class="fa-solid fa-check"></i> Diseño responsive</li>
+            <li><i class="fa-solid fa-check"></i> Botón de WhatsApp</li>
+            <li><i class="fa-solid fa-check"></i> Integración con Google Maps</li>
+            <li><i class="fa-solid fa-check"></i> Formulario de contacto</li>
+            <li><i class="fa-solid fa-check"></i> Enlaces a redes sociales</li>
+            <li><i class="fa-solid fa-check"></i> Optimización básica de velocidad</li>
+            <li><i class="fa-solid fa-check"></i> Certificado SSL incluido</li>
+            <li><i class="fa-solid fa-check"></i> Publicación del sitio web</li>
+          </ul>
+          <div class="astraservices-plan__hosting">
+            <p class="astraservices-plan__hosting-title">Opciones de hosting:</p>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>Opción 1 — GitHub Pages <span class="astraservices-plan__hosting-badge">100% gratuito ✅</span></strong></p>
+              <ul>
+                <li>Sin costo de hosting ni dominio</li>
+                <li>Tu sitio queda en: tunegocio.github.io</li>
+                <li>Ideal para páginas informativas y publicitarias</li>
+                <li>Rápido, seguro y con SSL incluido</li>
+                <li>Dominio personalizado opcional: $150-250 MXN/año</li>
+              </ul>
+            </div>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>Opción 2 — Netlify <span class="astraservices-plan__hosting-badge">también gratuito ✅</span></strong></p>
+              <ul>
+                <li>Sin costo de hosting ni dominio</li>
+                <li>Tu sitio queda en: tunegocio.netlify.app</li>
+                <li>Rápido, seguro y con SSL incluido</li>
+                <li>Dominio personalizado opcional: $150-250 MXN/año</li>
+              </ul>
+            </div>
+          </div>
+          <p class="astraservices-plan__footnote">Este plan es una página 100% informativa y publicitaria, perfecta para atraer clientes y mostrar tu negocio en internet. No incluye tienda en línea, base de datos ni panel administrativo.</p>
+          <a href="#contacto" class="astrabtn astrabtn--primary astrabtn--plan">
+            <span>Solicitar este plan</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- PLAN BUSINESS -->
+        <div class="astraservices-plan astraplan--featured reveal">
+          <div class="astraservices-plan__badge">Más Popular ⭐</div>
+          <div class="astraservices-plan__header">
+            <h3 class="astraservices-plan__name">Plan Business</h3>
+            <p class="astraservices-plan__sub">Sitio Web Profesional</p>
+          </div>
+          <div class="astraservices-plan__price">
+            <span class="astraservices-plan__amount">$4,999</span>
+            <span class="astraservices-plan__currency">MXN</span>
+          </div>
+          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
+          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 7 a 12 días hábiles</p>
+          <p class="astraservices-plan__ideal">Ideal para: negocios que desean imagen profesional y posibilidad de crecer en el futuro.</p>
+          <ul class="astraservices-plan__list">
+            <li><i class="fa-solid fa-plus"></i> Todo lo del Plan Starter más:</li>
+            <li><i class="fa-solid fa-check"></i> Hasta 10 secciones</li>
+            <li><i class="fa-solid fa-check"></i> Animaciones profesionales</li>
+            <li><i class="fa-solid fa-check"></i> Optimización SEO básica</li>
+            <li><i class="fa-solid fa-check"></i> Correos empresariales</li>
+            <li><i class="fa-solid fa-check"></i> Formulario avanzado</li>
+            <li><i class="fa-solid fa-check"></i> Galería dinámica</li>
+            <li><i class="fa-solid fa-check"></i> Soporte durante la publicación</li>
+            <li><i class="fa-solid fa-check"></i> Configuración completa del dominio</li>
+          </ul>
+          <div class="astraservices-plan__hosting">
+            <p class="astraservices-plan__hosting-title">Opciones de hosting (el cliente elige):</p>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>Hostinger Premium <span class="astraservices-plan__hosting-badge">recomendado ⭐</span></strong></p>
+              <ul>
+                <li class="billing-monthly">Mensual: desde $90-150 MXN/mes</li>
+                <li class="billing-yearly">Anual: desde $30-40 MXN/mes</li>
+                <li>Incluye: SSL, correos empresariales, copias de seguridad</li>
+              </ul>
+            </div>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>HostGator</strong></p>
+              <ul>
+                <li class="billing-monthly">Mensual: $120-180 MXN/mes</li>
+                <li class="billing-yearly">Anual: $80-120 MXN/mes</li>
+              </ul>
+            </div>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>Namecheap Stellar</strong></p>
+              <ul>
+                <li class="billing-monthly">Mensual: $80-140 MXN/mes</li>
+                <li class="billing-yearly">Anual: $60-100 MXN/mes</li>
+              </ul>
+            </div>
+          </div>
+          <p class="astraservices-plan__footnote">El costo del hosting del primer año puede incluirse en la cotización. A partir del segundo año queda a nombre del cliente.</p>
+          <a href="#contacto" class="astrabtn astrabtn--primary astrabtn--plan">
+            <span>Solicitar este plan</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- PLAN PREMIUM -->
+        <div class="astraservices-plan reveal">
+          <div class="astraservices-plan__header">
+            <h3 class="astraservices-plan__name">Plan Premium</h3>
+            <p class="astraservices-plan__sub">Solución Empresarial</p>
+          </div>
+          <div class="astraservices-plan__price">
+            <span class="astraservices-plan__amount">Desde $8,999</span>
+            <span class="astraservices-plan__currency">MXN</span>
+          </div>
+          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
+          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 15 a 30 días hábiles</p>
+          <p class="astraservices-plan__ideal">Ideal para: empresas que requieren procesos avanzados, automatización y presencia digital completa.</p>
+          <ul class="astraservices-plan__list">
+            <li><i class="fa-solid fa-plus"></i> Todo lo del Plan Business más:</li>
+            <li><i class="fa-solid fa-check"></i> Base de datos</li>
+            <li><i class="fa-solid fa-check"></i> Panel administrativo</li>
+            <li><i class="fa-solid fa-check"></i> Sistema de usuarios y roles</li>
+            <li><i class="fa-solid fa-check"></i> Catálogo de productos</li>
+            <li><i class="fa-solid fa-check"></i> Tienda en línea</li>
+            <li><i class="fa-solid fa-check"></i> Sistema de cotizaciones en línea</li>
+            <li><i class="fa-solid fa-check"></i> Reservaciones y agenda de citas</li>
+            <li><i class="fa-solid fa-check"></i> Blog</li>
+            <li><i class="fa-solid fa-check"></i> Estadísticas y reportes</li>
+            <li><i class="fa-solid fa-check"></i> Capacitación al cliente</li>
+            <li><i class="fa-solid fa-check"></i> Optimización SEO avanzada</li>
+            <li><i class="fa-solid fa-check"></i> Integración de pagos en línea</li>
+          </ul>
+          <div class="astraservices-plan__hosting">
+            <p class="astraservices-plan__hosting-title">Opciones de hosting:</p>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>Hostinger Business o Cloud</strong></p>
+              <ul>
+                <li class="billing-monthly">Mensual: $200-350 MXN/mes</li>
+                <li class="billing-yearly">Anual: $100-180 MXN/mes</li>
+              </ul>
+            </div>
+            <div class="astraservices-plan__hosting-option">
+              <p><strong>VPS básico</strong> <span class="text-muted">(mayor control y rendimiento)</span></p>
+              <ul>
+                <li class="billing-monthly">Mensual: $250-500 MXN/mes</li>
+                <li class="billing-yearly">Anual: $200-400 MXN/mes</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#contacto" class="astrabtn astrabtn--primary astrabtn--plan">
+            <span>Solicitar este plan</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="astraservices-plans__disclaimer reveal">El dominio puede ser adquirido por el cliente o gestionado por ASTRACODE VR. Los costos de hosting y dominio varían según proveedor y promociones vigentes.</p>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
-  <section class="astrasection" id="projects">
+  <section class="astrasection" id="proyectos">
     <div class="container">
       <div class="astrasection__header reveal">
         <span class="astrasection__tag">// Proyectos //</span>
@@ -308,6 +708,46 @@
     </div>
   </section>
 
+  <!-- PROPUESTA PERSONALIZADA -->
+  <section class="astrasection" id="propuesta">
+    <div class="container">
+      <div class="astrasection__header reveal">
+        <span class="astrasection__tag">// Propuesta //</span>
+        <h2 class="astrasection__title">¿No tienes página web aún? Nosotros damos <span>el primer paso</span></h2>
+        <div class="astrasection__line"></div>
+      </div>
+
+      <p class="astrapropuesta__intro reveal">En ASTRACODE VR no solo esperamos a que nos contactes. Analizamos negocios locales y en línea para identificar oportunidades de mejora digital. Si detectamos que podemos ayudarte a crecer, desarrollamos un prototipo personalizado de tu futura página web y te lo presentamos, sin ningún costo ni compromiso de tu parte.</p>
+
+      <div class="astrapropuesta__steps">
+        <div class="astrapropuesta__card reveal">
+          <div class="astrapropuesta__card-icon">🔍</div>
+          <h3>Analizamos tu negocio</h3>
+          <p>Estudiamos tu giro, tu competencia y tu presencia digital actual para entender exactamente qué necesitas y cómo podemos ayudarte a destacar.</p>
+        </div>
+        <div class="astrapropuesta__card reveal">
+          <div class="astrapropuesta__card-icon">🎨</div>
+          <h3>Creamos tu prototipo</h3>
+          <p>Desarrollamos una muestra real de cómo podría verse tu página web, personalizada con tu nombre, colores, servicios y la identidad de tu negocio.</p>
+        </div>
+        <div class="astrapropuesta__card reveal">
+          <div class="astrapropuesta__card-icon">📩</div>
+          <h3>Te lo presentamos sin compromiso</h3>
+          <p>Te contactamos para mostrarte el resultado. Si te convence, lo desarrollamos completo con uno de nuestros planes. Si no, no hay ningún costo ni obligación de tu parte.</p>
+        </div>
+      </div>
+
+      <p class="astrapropuesta__message reveal">Creemos que la mejor forma de demostrar lo que hacemos es mostrándolo. Por eso damos el primer paso.</p>
+
+      <div class="astrapropuesta__cta reveal">
+        <a href="#contacto" class="astrabtn astrabtn--neon astrabtn--large">
+          <span>¿Quieres que analicemos tu negocio?</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- PROCESO DE TRABAJO -->
   <section class="astrasection astrasection--dark" id="proceso">
     <div class="container">
@@ -350,233 +790,8 @@
     </div>
   </section>
 
-  <!-- SERVICIOS - PLANES DE PRECIOS -->
-  <section class="astrasection" id="servicios">
-    <div class="container">
-      <div class="astrasection__header reveal">
-        <span class="astrasection__tag">// Planes //</span>
-        <h2 class="astrasection__title">Planes para tu <span>proyecto</span></h2>
-        <div class="astrasection__line"></div>
-      </div>
-
-      <div class="astraservices-plans__toggle reveal">
-        <span class="astraservices-plans__toggle-label billing-label active" data-period="monthly">Mensual</span>
-        <button class="astraservices-plans__toggle-switch" id="billingToggle" aria-label="Cambiar periodo">
-          <span class="astraservices-plans__toggle-knob"></span>
-        </button>
-        <span class="astraservices-plans__toggle-label billing-label" data-period="yearly">Anual</span>
-      </div>
-
-      <div class="astraservices-plans">
-        <!-- PLAN STARTER -->
-        <div class="astraservices-plan reveal">
-          <div class="astraservices-plan__header">
-            <h3 class="astraservices-plan__name">Plan Starter</h3>
-            <p class="astraservices-plan__sub">Presencia Digital</p>
-          </div>
-          <div class="astraservices-plan__price">
-            <span class="astraservices-plan__amount">$2,499</span>
-            <span class="astraservices-plan__currency">MXN</span>
-          </div>
-          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
-          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 5 a 7 días hábiles</p>
-          <p class="astraservices-plan__ideal">Ideal para: pequeños negocios, consultorios, cafeterías, restaurantes, talleres, gimnasios, estéticas y profesionales independientes que desean tener presencia en internet.</p>
-          <ul class="astraservices-plan__list">
-            <li><i class="fa-solid fa-check"></i> Diseño web completamente personalizado</li>
-            <li><i class="fa-solid fa-check"></i> Hasta 5 secciones</li>
-            <li><i class="fa-solid fa-check"></i> Diseño responsive</li>
-            <li><i class="fa-solid fa-check"></i> Botón de WhatsApp</li>
-            <li><i class="fa-solid fa-check"></i> Integración con Google Maps</li>
-            <li><i class="fa-solid fa-check"></i> Formulario de contacto</li>
-            <li><i class="fa-solid fa-check"></i> Enlaces a redes sociales</li>
-            <li><i class="fa-solid fa-check"></i> Optimización básica de velocidad</li>
-            <li><i class="fa-solid fa-check"></i> Certificado SSL incluido</li>
-            <li><i class="fa-solid fa-check"></i> Publicación del sitio web</li>
-          </ul>
-          <div class="astraservices-plan__hosting">
-            <p class="astraservices-plan__hosting-title">Opciones de hosting:</p>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>Opción 1 — GitHub Pages <span class="astraservices-plan__hosting-badge">100% gratuito ✅</span></strong></p>
-              <ul>
-                <li>Sin costo de hosting ni dominio</li>
-                <li>Tu sitio queda en: tunegocio.github.io</li>
-                <li>Ideal para páginas informativas y publicitarias</li>
-                <li>Rápido, seguro y con SSL incluido</li>
-                <li>Dominio personalizado opcional: $150-250 MXN/año</li>
-              </ul>
-            </div>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>Opción 2 — Netlify <span class="astraservices-plan__hosting-badge">también gratuito ✅</span></strong></p>
-              <ul>
-                <li>Sin costo de hosting ni dominio</li>
-                <li>Tu sitio queda en: tunegocio.netlify.app</li>
-                <li>Rápido, seguro y con SSL incluido</li>
-                <li>Dominio personalizado opcional: $150-250 MXN/año</li>
-              </ul>
-            </div>
-          </div>
-          <p class="astraservices-plan__footnote">Este plan es una página 100% informativa y publicitaria, perfecta para atraer clientes y mostrar tu negocio en internet. No incluye tienda en línea, base de datos ni panel administrativo.</p>
-          <a href="#contact" class="astrabtn astrabtn--primary astrabtn--plan">
-            <span>Solicitar este plan</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- PLAN BUSINESS -->
-        <div class="astraservices-plan astraplan--featured reveal">
-          <div class="astraservices-plan__badge">Más Popular ⭐</div>
-          <div class="astraservices-plan__header">
-            <h3 class="astraservices-plan__name">Plan Business</h3>
-            <p class="astraservices-plan__sub">Sitio Web Profesional</p>
-          </div>
-          <div class="astraservices-plan__price">
-            <span class="astraservices-plan__amount">$4,999</span>
-            <span class="astraservices-plan__currency">MXN</span>
-          </div>
-          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
-          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 7 a 12 días hábiles</p>
-          <p class="astraservices-plan__ideal">Ideal para: negocios que desean imagen profesional y posibilidad de crecer en el futuro.</p>
-          <ul class="astraservices-plan__list">
-            <li><i class="fa-solid fa-plus"></i> Todo lo del Plan Starter más:</li>
-            <li><i class="fa-solid fa-check"></i> Hasta 10 secciones</li>
-            <li><i class="fa-solid fa-check"></i> Animaciones profesionales</li>
-            <li><i class="fa-solid fa-check"></i> Optimización SEO básica</li>
-            <li><i class="fa-solid fa-check"></i> Correos empresariales</li>
-            <li><i class="fa-solid fa-check"></i> Formulario avanzado</li>
-            <li><i class="fa-solid fa-check"></i> Galería dinámica</li>
-            <li><i class="fa-solid fa-check"></i> Soporte durante la publicación</li>
-            <li><i class="fa-solid fa-check"></i> Configuración completa del dominio</li>
-          </ul>
-          <div class="astraservices-plan__hosting">
-            <p class="astraservices-plan__hosting-title">Opciones de hosting (el cliente elige):</p>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>Hostinger Premium <span class="astraservices-plan__hosting-badge">recomendado ⭐</span></strong></p>
-              <ul>
-                <li class="billing-monthly">Mensual: desde $90-150 MXN/mes</li>
-                <li class="billing-yearly">Anual: desde $30-40 MXN/mes</li>
-                <li>Incluye: SSL, correos empresariales, copias de seguridad</li>
-              </ul>
-            </div>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>HostGator</strong></p>
-              <ul>
-                <li class="billing-monthly">Mensual: $120-180 MXN/mes</li>
-                <li class="billing-yearly">Anual: $80-120 MXN/mes</li>
-              </ul>
-            </div>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>Namecheap Stellar</strong></p>
-              <ul>
-                <li class="billing-monthly">Mensual: $80-140 MXN/mes</li>
-                <li class="billing-yearly">Anual: $60-100 MXN/mes</li>
-              </ul>
-            </div>
-          </div>
-          <p class="astraservices-plan__footnote">El costo del hosting del primer año puede incluirse en la cotización. A partir del segundo año queda a nombre del cliente.</p>
-          <a href="#contact" class="astrabtn astrabtn--primary astrabtn--plan">
-            <span>Solicitar este plan</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- PLAN PREMIUM -->
-        <div class="astraservices-plan reveal">
-          <div class="astraservices-plan__header">
-            <h3 class="astraservices-plan__name">Plan Premium</h3>
-            <p class="astraservices-plan__sub">Solución Empresarial</p>
-          </div>
-          <div class="astraservices-plan__price">
-            <span class="astraservices-plan__amount">Desde $8,999</span>
-            <span class="astraservices-plan__currency">MXN</span>
-          </div>
-          <p class="astraservices-plan__payment">Pago único · 50% para iniciar · 50% al entregar</p>
-          <p class="astraservices-plan__delivery"><i class="fa-solid fa-clock"></i> 15 a 30 días hábiles</p>
-          <p class="astraservices-plan__ideal">Ideal para: empresas que requieren procesos avanzados, automatización y presencia digital completa.</p>
-          <ul class="astraservices-plan__list">
-            <li><i class="fa-solid fa-plus"></i> Todo lo del Plan Business más:</li>
-            <li><i class="fa-solid fa-check"></i> Base de datos</li>
-            <li><i class="fa-solid fa-check"></i> Panel administrativo</li>
-            <li><i class="fa-solid fa-check"></i> Sistema de usuarios y roles</li>
-            <li><i class="fa-solid fa-check"></i> Catálogo de productos</li>
-            <li><i class="fa-solid fa-check"></i> Tienda en línea</li>
-            <li><i class="fa-solid fa-check"></i> Sistema de cotizaciones en línea</li>
-            <li><i class="fa-solid fa-check"></i> Reservaciones y agenda de citas</li>
-            <li><i class="fa-solid fa-check"></i> Blog</li>
-            <li><i class="fa-solid fa-check"></i> Estadísticas y reportes</li>
-            <li><i class="fa-solid fa-check"></i> Capacitación al cliente</li>
-            <li><i class="fa-solid fa-check"></i> Optimización SEO avanzada</li>
-            <li><i class="fa-solid fa-check"></i> Integración de pagos en línea</li>
-          </ul>
-          <div class="astraservices-plan__hosting">
-            <p class="astraservices-plan__hosting-title">Opciones de hosting:</p>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>Hostinger Business o Cloud</strong></p>
-              <ul>
-                <li class="billing-monthly">Mensual: $200-350 MXN/mes</li>
-                <li class="billing-yearly">Anual: $100-180 MXN/mes</li>
-              </ul>
-            </div>
-            <div class="astraservices-plan__hosting-option">
-              <p><strong>VPS básico</strong> <span class="text-muted">(mayor control y rendimiento)</span></p>
-              <ul>
-                <li class="billing-monthly">Mensual: $250-500 MXN/mes</li>
-                <li class="billing-yearly">Anual: $200-400 MXN/mes</li>
-              </ul>
-            </div>
-          </div>
-          <a href="#contact" class="astrabtn astrabtn--primary astrabtn--plan">
-            <span>Solicitar este plan</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <p class="astraservices-plans__disclaimer reveal">El dominio puede ser adquirido por el cliente o gestionado por ASTRACODE VR. Los costos de hosting y dominio varían según proveedor y promociones vigentes.</p>
-    </div>
-  </section>
-
-  <!-- PROPUESTA PERSONALIZADA -->
-  <section class="astrasection" id="propuesta">
-    <div class="container">
-      <div class="astrasection__header reveal">
-        <span class="astrasection__tag">// Propuesta //</span>
-        <h2 class="astrasection__title">¿No tienes página web aún? Nosotros damos <span>el primer paso</span></h2>
-        <div class="astrasection__line"></div>
-      </div>
-
-      <p class="astrapropuesta__intro reveal">En ASTRACODE VR no solo esperamos a que nos contactes. Analizamos negocios locales y en línea para identificar oportunidades de mejora digital. Si detectamos que podemos ayudarte a crecer, desarrollamos un prototipo personalizado de tu futura página web y te lo presentamos, sin ningún costo ni compromiso de tu parte.</p>
-
-      <div class="astrapropuesta__steps">
-        <div class="astrapropuesta__card reveal">
-          <div class="astrapropuesta__card-icon">🔍</div>
-          <h3>Analizamos tu negocio</h3>
-          <p>Estudiamos tu giro, tu competencia y tu presencia digital actual para entender exactamente qué necesitas y cómo podemos ayudarte a destacar.</p>
-        </div>
-        <div class="astrapropuesta__card reveal">
-          <div class="astrapropuesta__card-icon">🎨</div>
-          <h3>Creamos tu prototipo</h3>
-          <p>Desarrollamos una muestra real de cómo podría verse tu página web, personalizada con tu nombre, colores, servicios y la identidad de tu negocio.</p>
-        </div>
-        <div class="astrapropuesta__card reveal">
-          <div class="astrapropuesta__card-icon">📩</div>
-          <h3>Te lo presentamos sin compromiso</h3>
-          <p>Te contactamos para mostrarte el resultado. Si te convence, lo desarrollamos completo con uno de nuestros planes. Si no, no hay ningún costo ni obligación de tu parte.</p>
-        </div>
-      </div>
-
-      <p class="astrapropuesta__message reveal">Creemos que la mejor forma de demostrar lo que hacemos es mostrándolo. Por eso damos el primer paso.</p>
-
-      <div class="astrapropuesta__cta reveal">
-        <a href="#contact" class="astrabtn astrabtn--neon astrabtn--large">
-          <span>¿Quieres que analicemos tu negocio?</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- STATS -->
-  <section class="astrasection" id="stats">
+  <section class="astrasection" id="estadisticas">
     <div class="container">
       <div class="astrasection__header reveal">
         <span class="astrasection__tag">// Estadísticas //</span>
@@ -619,188 +834,8 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="astrasection astrasection--dark" id="skills">
-    <canvas class="astramatrix" id="matrixCanvas" aria-hidden="true"></canvas>
-    <div class="container" style="position:relative;z-index:2;">
-      <div class="astrasection__header reveal">
-        <span class="astrasection__tag">// Habilidades //</span>
-        <h2 class="astrasection__title">Tecnologías &amp; <span>dominio</span></h2>
-        <div class="astrasection__line"></div>
-      </div>
-
-      <div class="astraskills" id="skillsGrid">
-        <div class="astraskills__item" data-progress="95">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-html5"></i></div>
-          </div>
-          <span class="astraskills__name">HTML5</span>
-          <span class="astraskills__pct">95%</span>
-        </div>
-        <div class="astraskills__item" data-progress="90">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-css3-alt"></i></div>
-          </div>
-          <span class="astraskills__name">CSS3</span>
-          <span class="astraskills__pct">90%</span>
-        </div>
-        <div class="astraskills__item" data-progress="85">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-js"></i></div>
-          </div>
-          <span class="astraskills__name">JavaScript</span>
-          <span class="astraskills__pct">85%</span>
-        </div>
-        <div class="astraskills__item" data-progress="70">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-vuejs"></i></div>
-          </div>
-          <span class="astraskills__name">Vue.js</span>
-          <span class="astraskills__pct">70%</span>
-        </div>
-        <div class="astraskills__item" data-progress="70">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-angular"></i></div>
-          </div>
-          <span class="astraskills__name">Angular</span>
-          <span class="astraskills__pct">70%</span>
-        </div>
-        <div class="astraskills__item" data-progress="88">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-java"></i></div>
-          </div>
-          <span class="astraskills__name">Java</span>
-          <span class="astraskills__pct">88%</span>
-        </div>
-        <div class="astraskills__item" data-progress="80">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-solid fa-leaf"></i></div>
-          </div>
-          <span class="astraskills__name">Spring Boot</span>
-          <span class="astraskills__pct">80%</span>
-        </div>
-        <div class="astraskills__item" data-progress="75">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-php"></i></div>
-          </div>
-          <span class="astraskills__name">PHP</span>
-          <span class="astraskills__pct">75%</span>
-        </div>
-        <div class="astraskills__item" data-progress="65">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-python"></i></div>
-          </div>
-          <span class="astraskills__name">Python</span>
-          <span class="astraskills__pct">65%</span>
-        </div>
-        <div class="astraskills__item" data-progress="50">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-golang"></i></div>
-          </div>
-          <span class="astraskills__name">Go</span>
-          <span class="astraskills__pct">50%</span>
-        </div>
-        <div class="astraskills__item" data-progress="55">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-          </div>
-          <span class="astraskills__name">Flutter</span>
-          <span class="astraskills__pct">55%</span>
-        </div>
-        <div class="astraskills__item" data-progress="80">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-solid fa-database"></i></div>
-          </div>
-          <span class="astraskills__name">MySQL</span>
-          <span class="astraskills__pct">80%</span>
-        </div>
-        <div class="astraskills__item" data-progress="70">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-solid fa-database"></i></div>
-          </div>
-          <span class="astraskills__name">PostgreSQL</span>
-          <span class="astraskills__pct">70%</span>
-        </div>
-        <div class="astraskills__item" data-progress="85">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-brands fa-git-alt"></i></div>
-          </div>
-          <span class="astraskills__name">Git</span>
-          <span class="astraskills__pct">85%</span>
-        </div>
-        <div class="astraskills__item" data-progress="60">
-          <div class="astraskills__circle">
-            <svg viewBox="0 0 120 120">
-              <circle class="astraskills__circle-bg" cx="60" cy="60" r="52" />
-              <circle class="astraskills__circle-fill" cx="60" cy="60" r="52" />
-            </svg>
-            <div class="astraskills__icon"><i class="fa-solid fa-brain"></i></div>
-          </div>
-          <span class="astraskills__name">IA</span>
-          <span class="astraskills__pct">60%</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
-  <section class="astrasection" id="contact">
+  <section class="astrasection" id="contacto">
     <div class="container">
       <div class="astrasection__header reveal">
         <span class="astrasection__tag">// Contacto //</span>
