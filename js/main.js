@@ -65,35 +65,93 @@
     var canvas = document.getElementById('particleCanvas');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-    var particles = [];
     var mouse = { x: -9999, y: -9999 };
     var animId;
+    var time = 0;
+    var gridSize = 70;
+    var nodes = [];
+    var circuits = [];
+    var packets = [];
+    var floaters = [];
+    var symbols = ['{', '}', '<', '>', '/', '=', '0x1F', '0xFF', '&&', '||', '=>', '[]', '/*', '*/'];
 
     function resize() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      buildScene();
     }
-    resize();
-    window.addEventListener('resize', resize);
 
-    var PARTICLE_COUNT = 80;
-    var CONNECT_DIST = 140;
-    var MOUSE_RADIUS = 120;
+    function buildScene() {
+      nodes = [];
+      circuits = [];
+      packets = [];
+      floaters = [];
 
-    function createParticles() {
-      particles = [];
-      for (var i = 0; i < PARTICLE_COUNT; i++) {
-        particles.push({
+      var cols = Math.ceil(canvas.width / gridSize) + 1;
+      var rows = Math.ceil(canvas.height / gridSize) + 1;
+
+      for (var r = 0; r < rows; r++) {
+        for (var c = 0; c < cols; c++) {
+          if (Math.random() > 0.35) {
+            nodes.push({
+              bx: c * gridSize + gridSize / 2,
+              by: r * gridSize + gridSize / 2,
+              x: c * gridSize + gridSize / 2,
+              y: r * gridSize + gridSize / 2,
+              size: 1.5 + Math.random() * 2.5,
+              phase: Math.random() * Math.PI * 2,
+              speed: 0.01 + Math.random() * 0.03,
+              links: 0
+            });
+          }
+        }
+      }
+
+      for (var i = 0; i < nodes.length; i++) {
+        for (var j = i + 1; j < nodes.length; j++) {
+          var dx = nodes[i].bx - nodes[j].bx;
+          var dy = nodes[i].by - nodes[j].by;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < gridSize * 1.5 && dist > 0 && Math.random() > 0.55) {
+            nodes[i].links++;
+            nodes[j].links++;
+            circuits.push({
+              a: nodes[i], b: nodes[j],
+              alpha: 0.08 + Math.random() * 0.2,
+              phase: Math.random() * Math.PI * 2
+            });
+          }
+        }
+      }
+
+      for (var k = 0; k < 18; k++) {
+        var ci = Math.floor(Math.random() * circuits.length);
+        if (circuits[ci]) {
+          packets.push({
+            circuit: circuits[ci],
+            t: Math.random(),
+            dir: Math.random() > 0.5 ? 1 : -1,
+            speed: 0.004 + Math.random() * 0.008,
+            size: 2 + Math.random() * 3
+          });
+        }
+      }
+
+      for (var f = 0; f < 25; f++) {
+        floaters.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.6,
-          vy: (Math.random() - 0.5) * 0.6,
-          size: Math.random() * 2 + 1,
-          color: Math.random() > 0.5 ? '16, 140, 253' : '19, 90, 209'
+          text: symbols[Math.floor(Math.random() * symbols.length)],
+          size: 11 + Math.random() * 14,
+          speed: 0.15 + Math.random() * 0.35,
+          drift: Math.random() * 0.4 - 0.2,
+          alpha: 0.02 + Math.random() * 0.04
         });
       }
     }
-    createParticles();
+
+    resize();
+    window.addEventListener('resize', resize);
 
     document.addEventListener('mousemove', function (e) {
       mouse.x = e.clientX;
@@ -105,53 +163,206 @@
       mouse.y = -9999;
     });
 
+    function ptOnCurve(p0, p1, p2, p3, t) {
+      var u = 1 - t;
+      return {
+        x: u*u*u*p0.x + 3*u*u*t*p1.x + 3*u*t*t*p2.x + t*t*t*p3.x,
+        y: u*u*u*p0.y + 3*u*u*t*p1.y + 3*u*t*t*p2.y + t*t*t*p3.y
+      };
+    }
+
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      time++;
 
-      for (var i = 0; i < particles.length; i++) {
-        var p = particles[i];
+      var gw = canvas.width;
+      var gh = canvas.height;
 
-        var dx = p.x - mouse.x;
-        var dy = p.y - mouse.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < MOUSE_RADIUS && dist > 0) {
-          var force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
-          p.vx += (dx / dist) * force * 0.5;
-          p.vy += (dy / dist) * force * 0.5;
-        }
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        p.vx *= 0.99;
-        p.vy *= 0.99;
-
-        if (p.x < -10) p.x = canvas.width + 10;
-        if (p.x > canvas.width + 10) p.x = -10;
-        if (p.y < -10) p.y = canvas.height + 10;
-        if (p.y > canvas.height + 10) p.y = -10;
-
+      // --- background grid ---
+      ctx.strokeStyle = 'rgba(16, 140, 253, 0.03)';
+      ctx.lineWidth = 1;
+      var off = (time * 0.15) % gridSize;
+      for (var x = -gridSize + off; x < gw + gridSize; x += gridSize) {
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(' + p.color + ', 0.8)';
-        ctx.fill();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, gh);
+        ctx.stroke();
+      }
+      for (var y = -gridSize + off; y < gh + gridSize; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(gw, y);
+        ctx.stroke();
+      }
 
-        for (var j = i + 1; j < particles.length; j++) {
-          var p2 = particles[j];
-          var dx2 = p.x - p2.x;
-          var dy2 = p.y - p2.y;
-          var dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
-          if (dist2 < CONNECT_DIST) {
-            var opacity = (1 - dist2 / CONNECT_DIST) * 0.4;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = 'rgba(16, 140, 253, ' + opacity + ')';
-            ctx.lineWidth = 0.6;
-            ctx.stroke();
-          }
+      // --- diagonal accent lines ---
+      ctx.strokeStyle = 'rgba(16, 140, 253, 0.015)';
+      ctx.lineWidth = 1;
+      var dOff = (time * 0.05) % (gridSize * 2);
+      for (var d = -gw - gh; d < gw + gh; d += gridSize * 2) {
+        ctx.beginPath();
+        ctx.moveTo(d + dOff, 0);
+        ctx.lineTo(d + dOff + gh, gh);
+        ctx.stroke();
+      }
+
+      // --- circuits ---
+      for (var ci = 0; ci < circuits.length; ci++) {
+        var circ = circuits[ci];
+        var breath = 0.5 + Math.sin(time * 0.015 + circ.phase) * 0.3;
+        var alpha = circ.alpha * breath;
+        if (alpha < 0.01) continue;
+
+        var a = circ.a, b = circ.b;
+
+        if (ci % 2 === 0) {
+          var cx = (a.x + b.x) / 2 + Math.sin(ci) * 25;
+          var cy = (a.y + b.y) / 2 + Math.cos(ci) * 25;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.quadraticCurveTo(cx, cy, b.x, b.y);
+          ctx.strokeStyle = 'rgba(16, 140, 253, ' + alpha + ')';
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        } else {
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = 'rgba(16, 140, 253, ' + (alpha * 0.7) + ')';
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
         }
       }
+
+      // --- data packets ---
+      for (var pi = 0; pi < packets.length; pi++) {
+        var pkt = packets[pi];
+        var c = pkt.circuit;
+        if (!c) continue;
+
+        pkt.t += pkt.speed * pkt.dir;
+        if (pkt.t > 1) { pkt.t = 1; pkt.dir = -1; }
+        if (pkt.t < 0) { pkt.t = 0; pkt.dir = 1; }
+
+        var t = pkt.t;
+        var px, py;
+
+        if (pi % 2 === 0) {
+          var cx = (c.a.x + c.b.x) / 2 + Math.sin(pi) * 25;
+          var cy = (c.a.y + c.b.y) / 2 + Math.cos(pi) * 25;
+          var u = 1 - t;
+          px = u*u*c.a.x + 2*u*t*cx + t*t*c.b.x;
+          py = u*u*c.a.y + 2*u*t*cy + t*t*c.b.y;
+        } else {
+          px = c.a.x + (c.b.x - c.a.x) * t;
+          py = c.a.y + (c.b.y - c.a.y) * t;
+        }
+
+        var glow = ctx.createRadialGradient(px, py, 0, px, py, pkt.size * 4);
+        glow.addColorStop(0, 'rgba(16, 140, 253, 0.9)');
+        glow.addColorStop(0.3, 'rgba(16, 140, 253, 0.3)');
+        glow.addColorStop(1, 'rgba(16, 140, 253, 0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(px, py, pkt.size * 4, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+        ctx.beginPath();
+        ctx.arc(px, py, pkt.size * 0.45, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // --- nodes ---
+      for (var ni = 0; ni < nodes.length; ni++) {
+        var n = nodes[ni];
+        var pulse = Math.sin(time * n.speed + n.phase);
+        n.phase += n.speed;
+        n.phase = n.phase % (Math.PI * 2);
+
+        // mouse repulsion
+        var mdx = n.x - mouse.x;
+        var mdy = n.y - mouse.y;
+        var mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (mDist < 180 && mDist > 0) {
+          var f = (180 - mDist) / 180 * 25;
+          n.x += (mdx / mDist) * f;
+          n.y += (mdy / mDist) * f;
+        }
+        n.x += (n.bx - n.x) * 0.06;
+        n.y += (n.by - n.y) * 0.06;
+
+        var rad = n.size * (0.7 + pulse * 0.3);
+        var alpha = 0.5 + pulse * 0.3;
+
+        // glow
+        var g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, rad * 8);
+        g.addColorStop(0, 'rgba(16, 140, 253, ' + (0.35 * alpha) + ')');
+        g.addColorStop(1, 'rgba(16, 140, 253, 0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad * 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // outer ring
+        ctx.strokeStyle = 'rgba(16, 140, 253, ' + (0.3 * alpha) + ')';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad * 2, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // core
+        ctx.fillStyle = 'rgba(16, 140, 253, ' + (0.7 + pulse * 0.3) + ')';
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, rad, 0, Math.PI * 2);
+        ctx.fill();
+
+        // white inner core for hub nodes
+        if (n.links > 3) {
+          ctx.fillStyle = 'rgba(255, 255, 255, ' + (0.4 + pulse * 0.3) + ')';
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, rad * 0.4, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // --- floating tech symbols ---
+      for (var fi = 0; fi < floaters.length; fi++) {
+        var fl = floaters[fi];
+        fl.y -= fl.speed;
+        fl.x += Math.sin(time * 0.008 + fi * 2) * fl.drift * 0.5;
+
+        if (fl.y < -40) {
+          fl.y = gh + 40;
+          fl.x = Math.random() * gw;
+        }
+        if (fl.x < -40) fl.x = gw + 40;
+        if (fl.x > gw + 40) fl.x = -40;
+
+        ctx.font = fl.size + 'px "Fira Code", monospace';
+        ctx.fillStyle = 'rgba(16, 140, 253, ' + fl.alpha + ')';
+        ctx.fillText(fl.text, fl.x, fl.y);
+      }
+
+      // --- HUD corner brackets ---
+      var s = 35, m = 25;
+      ctx.strokeStyle = 'rgba(16, 140, 253, 0.12)';
+      ctx.lineWidth = 2;
+
+      ctx.beginPath(); ctx.moveTo(m, m + s); ctx.lineTo(m, m); ctx.lineTo(m + s, m); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(gw - m - s, m); ctx.lineTo(gw - m, m); ctx.lineTo(gw - m, m + s); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(m, gh - m - s); ctx.lineTo(m, gh - m); ctx.lineTo(m + s, gh - m); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(gw - m - s, gh - m); ctx.lineTo(gw - m, gh - m); ctx.lineTo(gw - m, gh - m - s); ctx.stroke();
+
+      // --- HUD labels ---
+      ctx.font = '9px "Fira Code", monospace';
+      ctx.fillStyle = 'rgba(16, 140, 253, 0.08)';
+      ctx.fillText('SYS::ONLINE', m + 4, m + 12);
+      ctx.textAlign = 'right';
+      ctx.fillText('NODES:' + nodes.length, gw - m - 4, m + 12);
+      ctx.fillText('v2.0.1', gw - m - 4, gh - m - 4);
+      ctx.textAlign = 'left';
+      ctx.fillText('ASTRACODE VR', m + 4, gh - m - 4);
 
       animId = requestAnimationFrame(draw);
     }
