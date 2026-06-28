@@ -53,7 +53,7 @@
     animateRing();
 
     var interactives = document.querySelectorAll(
-      'a, button, .astrabtn, .astranav__link, .astraskills__item, .astraprojects__card, .astraservices__card'
+      'a, button, .astrabtn, .astranav__link, .astraskills__item, .astraprojects__card, .astraservices__card, .astraservices-plan, .astraprocess__step, .astrapropuesta__card'
     );
     interactives.forEach(function (el) {
       el.addEventListener('mouseenter', function () { ring.classList.add('is-expanded'); });
@@ -588,6 +588,29 @@
     footer.textContent = footer.textContent.replace(/\d{4}/, String(new Date().getFullYear()));
   }
 
+  function initBillingToggle() {
+    var toggle = document.getElementById('billingToggle');
+    if (!toggle) return;
+
+    var labels = document.querySelectorAll('.billing-label');
+    var monthlyItems = document.querySelectorAll('.billing-monthly');
+    var yearlyItems = document.querySelectorAll('.billing-yearly');
+
+    function setBillingPeriod(isYearly) {
+      document.body.classList.toggle('is-billing-yearly', isYearly);
+      labels.forEach(function (l) {
+        l.classList.toggle('active', l.getAttribute('data-period') === (isYearly ? 'yearly' : 'monthly'));
+      });
+    }
+
+    toggle.addEventListener('click', function () {
+      var isYearly = document.body.classList.contains('is-billing-yearly');
+      setBillingPeriod(!isYearly);
+    });
+
+    setBillingPeriod(false);
+  }
+
   function init() {
     initLoader();
     initCursor();
@@ -604,6 +627,7 @@
     initForm();
     initSmoothNav();
     initCopyright();
+    initBillingToggle();
   }
 
   if (document.readyState === 'loading') {
