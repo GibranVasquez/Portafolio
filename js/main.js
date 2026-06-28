@@ -236,7 +236,7 @@
     if (!el) return;
 
     var phrases = [
-      'Desarrollador Web Full-Stack',
+      'Desarrollador Web & Software',
       'Especialista en Java & Spring Boot',
       'Apasionado por la IA y tecnología',
       'Freelancer en ASTRACODE VR',
